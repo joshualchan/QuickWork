@@ -123,11 +123,19 @@
                                 <rect key="frame" x="288" y="345" width="37" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="onDone:" destination="lJH-EY-ZnP" eventType="touchUpInside" id="kRO-8g-apT"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="G1d-Jc-f5C"/>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="ooO-R1-Pqk" id="9AD-t1-Jhc"/>
+                        <outlet property="phoneNumberField" destination="Mlo-PD-kyp" id="uWK-4c-026"/>
+                        <segue destination="USd-od-rcq" kind="presentation" identifier="personalInfoSegue" id="n2l-uJ-PJh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CsT-Zg-NC9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -243,4 +251,7 @@
             <point key="canvasLocation" x="2553" y="322"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="n2l-uJ-PJh"/>
+    </inferredMetricsTieBreakers>
 </document>

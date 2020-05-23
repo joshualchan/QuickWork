@@ -7,16 +7,34 @@
 //
 
 import UIKit
+import Parse
 
 class BasicInfoViewController: UIViewController {
 
+    @IBOutlet weak var emailField: UITextField!
+    
+    @IBOutlet weak var phoneNumberField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func onDone(_ sender: Any) {
+        let user = PFUser()
+        let email = emailField.text
+        let number = phoneNumberField.text
+        
+        if number != nil {
+            if email != nil {
+                self.performSegue(withIdentifier: "personalInfoSegue", sender: nil)
+            }
+        }
+        user["phone"] = number
+        user["email"] = email
+    }
+    
     /*
     // MARK: - Navigation
 
