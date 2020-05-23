@@ -3,27 +3,39 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2EC0ED2927833F406A258788 /* Pods_QuickWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA01C9C9C825048B335D59A /* Pods_QuickWork.framework */; };
 		5B5B44D624789A680074005B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B44D524789A680074005B /* AppDelegate.swift */; };
 		5B5B44D824789A680074005B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B44D724789A680074005B /* SceneDelegate.swift */; };
-		5B5B44DA24789A680074005B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B44D924789A680074005B /* ViewController.swift */; };
 		5B5B44DD24789A680074005B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B5B44DB24789A680074005B /* Main.storyboard */; };
 		5B5B44DF24789A680074005B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B5B44DE24789A680074005B /* Assets.xcassets */; };
 		5B5B44E224789A680074005B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B5B44E024789A680074005B /* LaunchScreen.storyboard */; };
+		5B5B44EA24789DAC0074005B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B44E924789DAC0074005B /* LoginViewController.swift */; };
+		5B5B44EC24789DEA0074005B /* BasicInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B44EB24789DEA0074005B /* BasicInfoViewController.swift */; };
+		5B5B44F02478A20E0074005B /* MyListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B44EF2478A20E0074005B /* MyListingsViewController.swift */; };
+		5B5B44F22478A21C0074005B /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B44F12478A21C0074005B /* FeedViewController.swift */; };
+		5B5B44F42478A2F10074005B /* AddListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B44F32478A2F10074005B /* AddListingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3CA01C9C9C825048B335D59A /* Pods_QuickWork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickWork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50F1749BCE9AC9F60BE67FD9 /* Pods-QuickWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickWork.release.xcconfig"; path = "Target Support Files/Pods-QuickWork/Pods-QuickWork.release.xcconfig"; sourceTree = "<group>"; };
 		5B5B44D224789A680074005B /* QuickWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B5B44D524789A680074005B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B5B44D724789A680074005B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5B5B44D924789A680074005B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5B5B44DC24789A680074005B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B5B44DE24789A680074005B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B5B44E124789A680074005B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B5B44E324789A680074005B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B5B44E924789DAC0074005B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5B5B44EB24789DEA0074005B /* BasicInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicInfoViewController.swift; sourceTree = "<group>"; };
+		5B5B44EF2478A20E0074005B /* MyListingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListingsViewController.swift; sourceTree = "<group>"; };
+		5B5B44F12478A21C0074005B /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		5B5B44F32478A2F10074005B /* AddListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListingViewController.swift; sourceTree = "<group>"; };
+		B7857C179043D7D6A86DA94E /* Pods-QuickWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickWork.debug.xcconfig"; path = "Target Support Files/Pods-QuickWork/Pods-QuickWork.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EC0ED2927833F406A258788 /* Pods_QuickWork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +55,8 @@
 			children = (
 				5B5B44D424789A680074005B /* QuickWork */,
 				5B5B44D324789A680074005B /* Products */,
+				A272B57CBBD09D1FD7C28E18 /* Pods */,
+				CE30ADE3C1FFCECFC4BF4118 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +73,34 @@
 			children = (
 				5B5B44D524789A680074005B /* AppDelegate.swift */,
 				5B5B44D724789A680074005B /* SceneDelegate.swift */,
-				5B5B44D924789A680074005B /* ViewController.swift */,
 				5B5B44DB24789A680074005B /* Main.storyboard */,
+				5B5B44F32478A2F10074005B /* AddListingViewController.swift */,
+				5B5B44F12478A21C0074005B /* FeedViewController.swift */,
+				5B5B44EF2478A20E0074005B /* MyListingsViewController.swift */,
+				5B5B44EB24789DEA0074005B /* BasicInfoViewController.swift */,
+				5B5B44E924789DAC0074005B /* LoginViewController.swift */,
 				5B5B44DE24789A680074005B /* Assets.xcassets */,
 				5B5B44E024789A680074005B /* LaunchScreen.storyboard */,
 				5B5B44E324789A680074005B /* Info.plist */,
 			);
 			path = QuickWork;
+			sourceTree = "<group>";
+		};
+		A272B57CBBD09D1FD7C28E18 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B7857C179043D7D6A86DA94E /* Pods-QuickWork.debug.xcconfig */,
+				50F1749BCE9AC9F60BE67FD9 /* Pods-QuickWork.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CE30ADE3C1FFCECFC4BF4118 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3CA01C9C9C825048B335D59A /* Pods_QuickWork.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B5B44E624789A680074005B /* Build configuration list for PBXNativeTarget "QuickWork" */;
 			buildPhases = (
+				EC44A949E2B65B2DC6728DA9 /* [CP] Check Pods Manifest.lock */,
 				5B5B44CE24789A680074005B /* Sources */,
 				5B5B44CF24789A680074005B /* Frameworks */,
 				5B5B44D024789A680074005B /* Resources */,
+				53C89338345336D764A16B61 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,13 +171,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		53C89338345336D764A16B61 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuickWork/Pods-QuickWork-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuickWork/Pods-QuickWork-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuickWork/Pods-QuickWork-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC44A949E2B65B2DC6728DA9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuickWork-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5B5B44CE24789A680074005B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B5B44DA24789A680074005B /* ViewController.swift in Sources */,
+				5B5B44EA24789DAC0074005B /* LoginViewController.swift in Sources */,
+				5B5B44F02478A20E0074005B /* MyListingsViewController.swift in Sources */,
+				5B5B44EC24789DEA0074005B /* BasicInfoViewController.swift in Sources */,
 				5B5B44D624789A680074005B /* AppDelegate.swift in Sources */,
+				5B5B44F22478A21C0074005B /* FeedViewController.swift in Sources */,
+				5B5B44F42478A2F10074005B /* AddListingViewController.swift in Sources */,
 				5B5B44D824789A680074005B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +366,7 @@
 		};
 		5B5B44E724789A680074005B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7857C179043D7D6A86DA94E /* Pods-QuickWork.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +384,7 @@
 		};
 		5B5B44E824789A680074005B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50F1749BCE9AC9F60BE67FD9 /* Pods-QuickWork.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
