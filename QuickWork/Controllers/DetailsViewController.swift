@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import AlamofireImage
 
 class DetailsViewController: UIViewController {
 
@@ -27,6 +28,13 @@ class DetailsViewController: UIViewController {
         taskNameLabel.text = details["name"] as? String
         cityLabel.text = details["city"] as? String
         let user = details["user"] as? PFUser
+        
+        if let imageFile = details["image"] as? PFFileObject {
+            let urlString = imageFile.url!
+            let url = URL(string: urlString)!
+            taskImage.af.setImage(withURL: url)
+        }
+        
         
         nameLabel.text = user?["name"] as? String
         

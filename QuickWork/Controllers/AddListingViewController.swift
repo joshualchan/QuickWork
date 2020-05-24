@@ -8,13 +8,15 @@
 
 import UIKit
 import Parse
+import AlamofireImage
 
-class AddListingViewController: UIViewController {
+class AddListingViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var taskImage: UIImageView!
     
     
     override func viewDidLoad() {
@@ -37,6 +39,13 @@ class AddListingViewController: UIViewController {
             object["name"] = nameTextField.text!
             object["description"] = descriptionTextField.text!
             object["city"] = cityTextField.text
+            
+            if let imageData = taskImage.image!.pngData() {
+            
+                let file = PFFileObject(name: "image.png", data: imageData)
+
+                object["image"] = file
+            }
             object["user"] = PFUser.current()
             
             object.saveInBackground { (success, error) in
@@ -54,6 +63,34 @@ class AddListingViewController: UIViewController {
             
         
     }
+    
+    
+    @IBAction func onPicture(_ sender: Any) {
+        print("in")
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+       
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            picker.sourceType = .camera
+        } else {
+            picker.sourceType = .photoLibrary
+        }
+       
+        present(picker, animated: true, completion: nil)
+    }
+
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[.editedImage] as! UIImage
+        
+        let size = CGSize(width: 300, height: 300)
+        let scaledImage = image.af.imageScaled(to: size)
+        
+        taskImage.image = scaledImage
+        dismiss(animated: true, completion: nil)
+    }
+    
     
     func emptyText() -> Bool {
         if nameTextField.text == nil || descriptionTextField.text == nil || cityTextField.text == nil  {
