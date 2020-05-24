@@ -48,6 +48,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         if sender is UITableViewCell{
             let cell = sender as! UITableViewCell
+            
+            
             let indexPath = tableView.indexPath(for: cell)!
             let details = tasks[indexPath.row]
             

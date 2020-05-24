@@ -101,12 +101,12 @@
 			children = (
 				5B5B44D524789A680074005B /* AppDelegate.swift */,
 				5B5B44D724789A680074005B /* SceneDelegate.swift */,
-				BF3869522479FCC500417693 /* FeedViewController.swift */,
-				BF3869542479FE0E00417693 /* MyListingsViewController.swift */,
-				BF3869562479FE5600417693 /* AddListingViewController.swift */,
 				BF3869582479FE9200417693 /* BasicInfoViewController.swift */,
 				BF38695A2479FECC00417693 /* LoginViewController.swift */,
+				BF3869542479FE0E00417693 /* MyListingsViewController.swift */,
+				BF3869522479FCC500417693 /* FeedViewController.swift */,
 				BF38695C2479FEFE00417693 /* DetailsViewController.swift */,
+				BF3869562479FE5600417693 /* AddListingViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
