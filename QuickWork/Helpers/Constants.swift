@@ -25,6 +25,10 @@ struct ViewControllers {
     static let details = "DetialsViewController"
 }
 
+struct Cells {
+    static let details = "DetailsCel'"
+}
+
 
 
 

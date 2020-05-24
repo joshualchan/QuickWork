@@ -20,6 +20,7 @@
 		BF3869592479FE9200417693 /* BasicInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3869582479FE9200417693 /* BasicInfoViewController.swift */; };
 		BF38695B2479FECC00417693 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF38695A2479FECC00417693 /* LoginViewController.swift */; };
 		BF38695D2479FEFE00417693 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF38695C2479FEFE00417693 /* DetailsViewController.swift */; };
+		BF38695F247A00B900417693 /* DetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF38695E247A00B900417693 /* DetailsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		BF3869582479FE9200417693 /* BasicInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicInfoViewController.swift; sourceTree = "<group>"; };
 		BF38695A2479FECC00417693 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BF38695C2479FEFE00417693 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		BF38695E247A00B900417693 /* DetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 		BF38694D2479F7AB00417693 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BF38695E247A00B900417693 /* DetailsCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			files = (
 				5B5B44D624789A680074005B /* AppDelegate.swift in Sources */,
 				BF3869572479FE5600417693 /* AddListingViewController.swift in Sources */,
+				BF38695F247A00B900417693 /* DetailsCell.swift in Sources */,
 				BF38695D2479FEFE00417693 /* DetailsViewController.swift in Sources */,
 				BF3869552479FE0E00417693 /* MyListingsViewController.swift in Sources */,
 				5B5B44D824789A680074005B /* SceneDelegate.swift in Sources */,

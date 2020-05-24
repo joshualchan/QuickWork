@@ -7,16 +7,18 @@
 //
 
 import UIKit
+import Parse
 
-class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class FeedViewController: UIViewController {
     
-    @IBOutlet weak var infoTableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
+    var tasks = [PFObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        infoTableView.delegate = self
-        infoTableView.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
         // Do any additional setup after loading the view.
     }
     
@@ -33,17 +35,26 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // Pass the selected object to the new view controller.
     }
     */
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
-    }
-    
-    
-    
-    
     
 }
+
+extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tasks.count
+       }
+       
+       func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Cells.details, for: indexPath) as! DetailsCell
+        
+        
+        return cell
+       }
+       
+}
+
+
+
+
+
+
+

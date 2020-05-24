@@ -195,6 +195,19 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="171" id="3vC-8Z-m2p" customClass="DetailsCell" customModule="QuickWork" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="171"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3vC-8Z-m2p" id="wPC-M7-UyI">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="171"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Hl1-Vr-ucZ" kind="show" id="r9i-e6-7OC"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -209,29 +222,30 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="infoTableView" destination="Yqb-aT-wrl" id="qQ0-y6-wGA"/>
+                        <outlet property="tableView" destination="Yqb-aT-wrl" id="qQ0-y6-wGA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cz4-v9-NpJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3491.3043478260875" y="321.42857142857139"/>
+            <point key="canvasLocation" x="3491.3043478260875" y="320.75892857142856"/>
         </scene>
-        <!--Details View Controller-->
+        <!--Details-->
         <scene sceneID="vxY-qR-siQ">
             <objects>
                 <viewController id="Hl1-Vr-ucZ" customClass="DetailsViewController" customModule="QuickWork" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FQk-Lg-rWl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="EpC-b4-tUJ"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Details" id="pH9-N8-QLD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Qh-6Z-xQh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4974" y="840"/>
         </scene>
-        <!--Add Listing View Controller-->
+        <!--My Listings-->
         <scene sceneID="EJO-ke-GFd">
             <objects>
                 <viewController id="QkK-n5-roV" customClass="AddListingViewController" customModule="QuickWork" customModuleProvider="target" sceneMemberID="viewController">
@@ -241,7 +255,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Xb3-Vk-y5f"/>
                     </view>
-                    <navigationItem key="navigationItem" id="rYI-6N-ACJ">
+                    <navigationItem key="navigationItem" title="My Listings" id="rYI-6N-ACJ">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="3G0-L5-FT5">
                             <connections>
                                 <action selector="onBack:" destination="QkK-n5-roV" id="dwU-Li-Gnr"/>
@@ -287,11 +301,11 @@
             </objects>
             <point key="canvasLocation" x="1682" y="-89"/>
         </scene>
-        <!--Item 1-->
+        <!--My Feed-->
         <scene sceneID="lT5-a1-51Y">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RsE-Z7-RLF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="fgx-R2-gaM"/>
+                    <tabBarItem key="tabBarItem" title="My Feed" id="fgx-R2-gaM"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WlN-9f-kIC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
@@ -306,11 +320,11 @@
             </objects>
             <point key="canvasLocation" x="2553" y="-385"/>
         </scene>
-        <!--Item 2-->
+        <!--Tasks-->
         <scene sceneID="oRh-Yg-Rst">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Ff-Os-Qiy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="aqs-7Q-5cg"/>
+                    <tabBarItem key="tabBarItem" title="Tasks" id="aqs-7Q-5cg"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Uzk-Rc-WWE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
@@ -330,6 +344,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9AD-ei-scX" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="0fw-ST-yZk"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hGR-fo-ofV">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
