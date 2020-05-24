@@ -23,7 +23,8 @@ class AddListingViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    
+    
     @IBAction func onBack(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -35,6 +36,7 @@ class AddListingViewController: UIViewController {
             
             object["name"] = nameTextField.text!
             object["description"] = descriptionTextField.text!
+            object["city"] = cityTextField.text
             object["user"] = PFUser.current()
             
             object.saveInBackground { (success, error) in

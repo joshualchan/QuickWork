@@ -23,28 +23,29 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func onSignIn(_ sender: Any) {
-        let username = usernameField.text!
-        let password = passwordField.text!
-        
-        PFUser.logInWithUsername(inBackground: username, password: password) { (user, error) in
-            if user != nil {
-                self.performSegue(withIdentifier: Segues.signIn, sender: nil)
-            } else {
-                print("Error: \(error!.localizedDescription)")
-                self.errorLabel.text = error!.localizedDescription
+        if let username = usernameField.text, let password = passwordField.text {
+            PFUser.logInWithUsername(inBackground: username, password: password) { (user, error) in
+                if user != nil {
+                    self.performSegue(withIdentifier: Segues.signIn, sender: nil)
+                } else {
+                    self.errorLabel.text = "Error: \(error!.localizedDescription)"
+                }
             }
         }
     }
     
     @IBAction func onSignUp(_ sender: Any) {
-        let user = PFUser()
-        user.username = usernameField.text
-        user.password = passwordField.text
-        user.signUpInBackground { (success, error) in
-            if success {
-                self.performSegue(withIdentifier: Segues.signUp, sender: nil)
-            } else {
-                print("Error: \(error!.localizedDescription)")
+        
+        if let username = usernameField.text, let password = passwordField.text {
+            let user = PFUser()
+            user.username = username
+            user.password = password
+            user.signUpInBackground { (success, error) in
+                if success {
+                    self.performSegue(withIdentifier: Segues.signUp, sender: nil)
+                } else {
+                    self.errorLabel.text = "Error: \(error!.localizedDescription)"
+                }
             }
         }
     }

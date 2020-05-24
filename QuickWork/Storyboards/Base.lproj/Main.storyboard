@@ -427,7 +427,7 @@
                     <navigationItem key="navigationItem" title="Add Listing" id="rYI-6N-ACJ">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="3G0-L5-FT5">
                             <connections>
-                                <action selector="onBack:" destination="QkK-n5-roV" id="dwU-Li-Gnr"/>
+                                <action selector="onBack:" destination="QkK-n5-roV" id="eUr-i6-wvk"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Add" id="9ah-an-s3b">
@@ -522,6 +522,7 @@
         <!--Navigation Controller-->
         <scene sceneID="4uh-Hx-msw">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fAS-by-z9Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9AD-ei-scX" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="0fw-ST-yZk"/>
@@ -534,7 +535,6 @@
                         <segue destination="QkK-n5-roV" kind="relationship" relationship="rootViewController" id="aFJ-ai-eTs"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fAS-by-z9Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4654" y="92"/>
         </scene>

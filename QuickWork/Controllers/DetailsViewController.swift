@@ -25,11 +25,10 @@ class DetailsViewController: UIViewController {
 
         descriptionLabel.text = details["description"] as? String
         taskNameLabel.text = details["name"] as? String
+        cityLabel.text = details["city"] as? String
         let user = details["user"] as? PFUser
         
         nameLabel.text = user?["name"] as? String
-        
-        
         
         // Do any additional setup after loading the view.
     }
