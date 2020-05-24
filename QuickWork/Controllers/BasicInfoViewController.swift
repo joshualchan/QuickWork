@@ -22,17 +22,17 @@ class BasicInfoViewController: UIViewController {
     }
     
     @IBAction func onDone(_ sender: Any) {
-        let user = PFUser()
-        let email = emailField.text
-        let number = phoneNumberField.text
         
-        if number != nil {
-            if email != nil {
-                self.performSegue(withIdentifier: Segues.personalInfo, sender: nil)
-            }
+        if let email = emailField.text {
+            PFUser.current()?.setObject(email, forKey: "email")
         }
-        user["phone"] = number
-        user["email"] = email
+        if let number = phoneNumberField.text {
+            PFUser.current()?.setObject(number, forKey: "number")
+        }
+        
+        PFUser.current()?.saveInBackground()
+        
+        self.performSegue(withIdentifier: Segues.personalInfo, sender: nil)
     }
     
     /*

@@ -11,6 +11,10 @@ import Parse
 
 class AddListingViewController: UIViewController {
 
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var descriptionTextField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,6 +24,36 @@ class AddListingViewController: UIViewController {
 
     @IBAction func onBack(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func addButton(_ sender: Any) {
+        
+        if emptyText() == false {
+            let object = PFObject(className: "Tasks")
+            
+            object["name"] = nameTextField.text!
+            object["description"] = descriptionTextField.text!
+            object["user"] = PFUser.current()
+            
+            object.saveInBackground { (success, error) in
+                if error != nil {
+                    print("Could not be saved, \(error!)")
+                } else {
+                    print("Saved successfully")
+                }
+            }
+            
+            dismiss(animated: true, completion: nil)
+        }
+            
+        
+    }
+    
+    func emptyText() -> Bool {
+        if nameTextField.text == nil || descriptionTextField.text == nil {
+            return true
+        }
+        return false
     }
     /*
     // MARK: - Navigation

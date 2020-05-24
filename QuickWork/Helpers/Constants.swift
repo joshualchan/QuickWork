@@ -26,7 +26,7 @@ struct ViewControllers {
 }
 
 struct Cells {
-    static let details = "DetailsCel'"
+    static let details = "DetailsCell"
 }
 
 

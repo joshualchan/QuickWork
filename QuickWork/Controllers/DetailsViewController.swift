@@ -11,6 +11,9 @@ import Parse
 
 class DetailsViewController: UIViewController {
 
+    
+    var details = PFObject()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
