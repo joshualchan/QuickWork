@@ -28,7 +28,7 @@ class BasicInfoViewController: UIViewController {
         
         if number != nil {
             if email != nil {
-                self.performSegue(withIdentifier: "personalInfoSegue", sender: nil)
+                self.performSegue(withIdentifier: Segues.personalInfo, sender: nil)
             }
         }
         user["phone"] = number

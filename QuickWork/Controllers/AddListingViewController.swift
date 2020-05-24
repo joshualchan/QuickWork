@@ -1,14 +1,14 @@
 //
-//  MyListingsViewController.swift
+//  AddListingViewController.swift
 //  QuickWork
 //
-//  Created by Joshua Chan on 5/22/20.
+//  Created by Christopher Cooper on 5/23/20.
 //  Copyright © 2020 Joshua Chan. All rights reserved.
 //
 
 import UIKit
 
-class MyListingsViewController: UIViewController {
+class AddListingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +17,9 @@ class MyListingsViewController: UIViewController {
     }
     
 
+    @IBAction func onBack(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 

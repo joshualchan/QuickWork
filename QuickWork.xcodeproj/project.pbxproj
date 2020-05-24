@@ -13,11 +13,13 @@
 		5B5B44DD24789A680074005B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B5B44DB24789A680074005B /* Main.storyboard */; };
 		5B5B44DF24789A680074005B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B5B44DE24789A680074005B /* Assets.xcassets */; };
 		5B5B44E224789A680074005B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B5B44E024789A680074005B /* LaunchScreen.storyboard */; };
-		5B5B44EA24789DAC0074005B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B44E924789DAC0074005B /* LoginViewController.swift */; };
-		5B5B44EC24789DEA0074005B /* BasicInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B44EB24789DEA0074005B /* BasicInfoViewController.swift */; };
-		5B5B44F02478A20E0074005B /* MyListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B44EF2478A20E0074005B /* MyListingsViewController.swift */; };
-		5B5B44F22478A21C0074005B /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B44F12478A21C0074005B /* FeedViewController.swift */; };
-		5B5B44F42478A2F10074005B /* AddListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B44F32478A2F10074005B /* AddListingViewController.swift */; };
+		BF3869512479F7D100417693 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3869502479F7D100417693 /* Constants.swift */; };
+		BF3869532479FCC500417693 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3869522479FCC500417693 /* FeedViewController.swift */; };
+		BF3869552479FE0E00417693 /* MyListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3869542479FE0E00417693 /* MyListingsViewController.swift */; };
+		BF3869572479FE5600417693 /* AddListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3869562479FE5600417693 /* AddListingViewController.swift */; };
+		BF3869592479FE9200417693 /* BasicInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3869582479FE9200417693 /* BasicInfoViewController.swift */; };
+		BF38695B2479FECC00417693 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF38695A2479FECC00417693 /* LoginViewController.swift */; };
+		BF38695D2479FEFE00417693 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF38695C2479FEFE00417693 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,12 +32,14 @@
 		5B5B44DE24789A680074005B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B5B44E124789A680074005B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B5B44E324789A680074005B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5B5B44E924789DAC0074005B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		5B5B44EB24789DEA0074005B /* BasicInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicInfoViewController.swift; sourceTree = "<group>"; };
-		5B5B44EF2478A20E0074005B /* MyListingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListingsViewController.swift; sourceTree = "<group>"; };
-		5B5B44F12478A21C0074005B /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
-		5B5B44F32478A2F10074005B /* AddListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListingViewController.swift; sourceTree = "<group>"; };
 		B7857C179043D7D6A86DA94E /* Pods-QuickWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickWork.debug.xcconfig"; path = "Target Support Files/Pods-QuickWork/Pods-QuickWork.debug.xcconfig"; sourceTree = "<group>"; };
+		BF3869502479F7D100417693 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BF3869522479FCC500417693 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		BF3869542479FE0E00417693 /* MyListingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListingsViewController.swift; sourceTree = "<group>"; };
+		BF3869562479FE5600417693 /* AddListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListingViewController.swift; sourceTree = "<group>"; };
+		BF3869582479FE9200417693 /* BasicInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicInfoViewController.swift; sourceTree = "<group>"; };
+		BF38695A2479FECC00417693 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BF38695C2479FEFE00417693 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,16 +75,11 @@
 		5B5B44D424789A680074005B /* QuickWork */ = {
 			isa = PBXGroup;
 			children = (
-				5B5B44D524789A680074005B /* AppDelegate.swift */,
-				5B5B44D724789A680074005B /* SceneDelegate.swift */,
-				5B5B44DB24789A680074005B /* Main.storyboard */,
-				5B5B44F32478A2F10074005B /* AddListingViewController.swift */,
-				5B5B44F12478A21C0074005B /* FeedViewController.swift */,
-				5B5B44EF2478A20E0074005B /* MyListingsViewController.swift */,
-				5B5B44EB24789DEA0074005B /* BasicInfoViewController.swift */,
-				5B5B44E924789DAC0074005B /* LoginViewController.swift */,
+				BF38694F2479F7BC00417693 /* Helpers */,
+				BF38694E2479F7B400417693 /* Storyboards */,
+				BF38694D2479F7AB00417693 /* Views */,
+				BF38694C2479F79600417693 /* Controllers */,
 				5B5B44DE24789A680074005B /* Assets.xcassets */,
-				5B5B44E024789A680074005B /* LaunchScreen.storyboard */,
 				5B5B44E324789A680074005B /* Info.plist */,
 			);
 			path = QuickWork;
@@ -93,6 +92,45 @@
 				50F1749BCE9AC9F60BE67FD9 /* Pods-QuickWork.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		BF38694C2479F79600417693 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5B5B44D524789A680074005B /* AppDelegate.swift */,
+				5B5B44D724789A680074005B /* SceneDelegate.swift */,
+				BF3869522479FCC500417693 /* FeedViewController.swift */,
+				BF3869542479FE0E00417693 /* MyListingsViewController.swift */,
+				BF3869562479FE5600417693 /* AddListingViewController.swift */,
+				BF3869582479FE9200417693 /* BasicInfoViewController.swift */,
+				BF38695A2479FECC00417693 /* LoginViewController.swift */,
+				BF38695C2479FEFE00417693 /* DetailsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BF38694D2479F7AB00417693 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BF38694E2479F7B400417693 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5B5B44DB24789A680074005B /* Main.storyboard */,
+				5B5B44E024789A680074005B /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		BF38694F2479F7BC00417693 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BF3869502479F7D100417693 /* Constants.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		CE30ADE3C1FFCECFC4BF4118 /* Frameworks */ = {
@@ -218,13 +256,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B5B44EA24789DAC0074005B /* LoginViewController.swift in Sources */,
-				5B5B44F02478A20E0074005B /* MyListingsViewController.swift in Sources */,
-				5B5B44EC24789DEA0074005B /* BasicInfoViewController.swift in Sources */,
 				5B5B44D624789A680074005B /* AppDelegate.swift in Sources */,
-				5B5B44F22478A21C0074005B /* FeedViewController.swift in Sources */,
-				5B5B44F42478A2F10074005B /* AddListingViewController.swift in Sources */,
+				BF3869572479FE5600417693 /* AddListingViewController.swift in Sources */,
+				BF38695D2479FEFE00417693 /* DetailsViewController.swift in Sources */,
+				BF3869552479FE0E00417693 /* MyListingsViewController.swift in Sources */,
 				5B5B44D824789A680074005B /* SceneDelegate.swift in Sources */,
+				BF38695B2479FECC00417693 /* LoginViewController.swift in Sources */,
+				BF3869592479FE9200417693 /* BasicInfoViewController.swift in Sources */,
+				BF3869532479FCC500417693 /* FeedViewController.swift in Sources */,
+				BF3869512479F7D100417693 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,14 +1,14 @@
 //
-//  AddListingViewController.swift
+//  DetailsViewController.swift
 //  QuickWork
 //
-//  Created by Joshua Chan on 5/22/20.
+//  Created by Christopher Cooper on 5/23/20.
 //  Copyright © 2020 Joshua Chan. All rights reserved.
 //
 
 import UIKit
 
-class AddListingViewController: UIViewController {
+class DetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

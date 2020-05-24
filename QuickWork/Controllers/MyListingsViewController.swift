@@ -1,14 +1,14 @@
 //
-//  FeedViewController.swift
+//  MyListingsViewController.swift
 //  QuickWork
 //
-//  Created by Joshua Chan on 5/22/20.
+//  Created by Christopher Cooper on 5/23/20.
 //  Copyright © 2020 Joshua Chan. All rights reserved.
 //
 
 import UIKit
 
-class FeedViewController: UIViewController {
+class MyListingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
