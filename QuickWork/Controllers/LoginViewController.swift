@@ -12,12 +12,13 @@ import Parse
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var usernameField: UITextField!
-    
+    @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var passwordField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        errorLabel.text = ""
         // Do any additional setup after loading the view.
     }
     
@@ -30,6 +31,7 @@ class LoginViewController: UIViewController {
                 self.performSegue(withIdentifier: Segues.signIn, sender: nil)
             } else {
                 print("Error: \(error!.localizedDescription)")
+                self.errorLabel.text = error!.localizedDescription
             }
         }
     }

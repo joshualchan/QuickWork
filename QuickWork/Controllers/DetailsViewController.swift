@@ -25,6 +25,9 @@ class DetailsViewController: UIViewController {
 
         descriptionLabel.text = details["description"] as? String
         taskNameLabel.text = details["name"] as? String
+        let user = details["user"] as? PFUser
+        
+        nameLabel.text = user?["name"] as? String
         
         
         

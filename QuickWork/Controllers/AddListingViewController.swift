@@ -13,11 +13,13 @@ class AddListingViewController: UIViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
+    @IBOutlet weak var cityTextField: UITextField!
+    @IBOutlet weak var errorLabel: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        errorLabel.text = ""
         // Do any additional setup after loading the view.
     }
     
@@ -44,13 +46,15 @@ class AddListingViewController: UIViewController {
             }
             
             dismiss(animated: true, completion: nil)
+        } else {
+            errorLabel.text = "Please fill out all sections."
         }
             
         
     }
     
     func emptyText() -> Bool {
-        if nameTextField.text == nil || descriptionTextField.text == nil {
+        if nameTextField.text == nil || descriptionTextField.text == nil || cityTextField.text == nil  {
             return true
         }
         return false
