@@ -93,7 +93,7 @@ class AddListingViewController: UIViewController, UIImagePickerControllerDelegat
     
     
     func emptyText() -> Bool {
-        if nameTextField.text == nil || descriptionTextField.text == nil || cityTextField.text == nil  {
+        if nameTextField.text == "" || descriptionTextField.text == "" || cityTextField.text == ""  {
             return true
         }
         return false
