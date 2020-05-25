@@ -47,6 +47,7 @@ class MyListingsViewController: UIViewController, UITableViewDelegate, UITableVi
         query.addDescendingOrder("createdAt")
         //query.limit = 20
         query.whereKey("user", equalTo: PFUser.current()!)
+        query.includeKey("user")
         query.findObjectsInBackground { (tasks, error) in
             if let tasks = tasks {
                 self.myListings = tasks
