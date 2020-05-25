@@ -38,9 +38,10 @@ class BasicInfoViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func onDone(_ sender: Any) {
-        if let email = emailField.text, let number = phoneNumberField.text, let name = nameField.text {
-        
-            
+        if emailField.text != "" && phoneNumberField.text != "" && nameField.text != "" {
+            let email = emailField.text!
+            let number = phoneNumberField.text!
+            let name = nameField.text!
             PFUser.current()?.setObject(email, forKey: "email")
             PFUser.current()?.setObject(number, forKey: "number")
             PFUser.current()?.setObject(name, forKey: "name")
