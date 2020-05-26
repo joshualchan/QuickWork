@@ -15,7 +15,7 @@
         <!--Login View Controller-->
         <scene sceneID="zDG-Nd-PAv">
             <objects>
-                <viewController id="4a0-Ff-vjr" customClass="LoginViewController" customModule="QuickWork" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="4a0-Ff-vjr" customClass="LoginViewController" customModule="QuickWork" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lbC-Zt-3dA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -277,6 +277,11 @@
                         <viewLayoutGuide key="safeArea" id="bEi-mb-yKg"/>
                     </view>
                     <navigationItem key="navigationItem" id="Fbr-97-pfe">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="cpZ-gT-XcP">
+                            <connections>
+                                <action selector="onLogoutButton:" destination="Uv1-Tx-7G7" id="hJZ-Gq-cOL"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Add Listing" id="BAk-1S-iN2">
                             <connections>
                                 <action selector="addListingButton:" destination="Uv1-Tx-7G7" id="qMd-l7-hTh"/>
@@ -549,7 +554,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7hx-s6-3VR"/>
                     </view>
-                    <navigationItem key="navigationItem" id="1gm-3i-8b1"/>
+                    <navigationItem key="navigationItem" id="1gm-3i-8b1">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="GXe-QD-Xgh">
+                            <connections>
+                                <action selector="onLogoutButton:" destination="BUu-Mu-Dk5" id="Ccw-rY-XB1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="YAy-0l-PQs" id="KeK-9H-A5C"/>
                     </connections>
@@ -636,8 +647,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="n2l-uJ-PJh"/>
-        <segue reference="hQS-i1-tjI"/>
+        <segue reference="IQf-fK-3lR"/>
+        <segue reference="r9i-e6-7OC"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="placeholder" width="375" height="375"/>

@@ -24,7 +24,7 @@ class BasicInfoViewController: UIViewController, UITextFieldDelegate {
         phoneNumberField.delegate = self
         
         errorLabel.text = ""
-        
+        // Do any additional setup after loading the view.
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
