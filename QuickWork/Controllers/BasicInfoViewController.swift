@@ -10,7 +10,7 @@ import UIKit
 import Parse
 
 class BasicInfoViewController: UIViewController, UITextFieldDelegate {
-
+ 
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var phoneNumberField: UITextField!
@@ -24,7 +24,7 @@ class BasicInfoViewController: UIViewController, UITextFieldDelegate {
         phoneNumberField.delegate = self
         
         errorLabel.text = ""
-        // Do any additional setup after loading the view.
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

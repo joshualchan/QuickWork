@@ -10,7 +10,7 @@ import UIKit
 import Parse
 
 class LoginViewController: UIViewController {
-
+ 
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var passwordField: UITextField!
@@ -19,7 +19,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         errorLabel.text = ""
-        // Do any additional setup after loading the view.
+        
     }
     
     @IBAction func onSignIn(_ sender: Any) {
