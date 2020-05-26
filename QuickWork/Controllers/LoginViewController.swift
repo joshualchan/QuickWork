@@ -2,7 +2,7 @@
 //  LoginViewController.swift
 //  QuickWork
 //
-//  Created by Joshua Chan on 5/22/20.
+//  Created by Madison Wong on 5/23/20.
 //  Copyright © 2020 Joshua Chan. All rights reserved.
 //
 

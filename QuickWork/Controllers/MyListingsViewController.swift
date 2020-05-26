@@ -10,6 +10,7 @@ import UIKit
 import Parse
 
 class MyListingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     var myListings = [PFObject]()
     var refreshControl: UIRefreshControl!
     
@@ -24,6 +25,8 @@ class MyListingsViewController: UIViewController, UITableViewDelegate, UITableVi
         
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(getTasks), for: .valueChanged)
+        tableView.addSubview(refreshControl)
+        
         // Do any additional setup after loading the view.
     }
     
@@ -56,7 +59,7 @@ class MyListingsViewController: UIViewController, UITableViewDelegate, UITableVi
                 print(error!.localizedDescription)
             }
         }
-        //refresh()
+        refresh()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
