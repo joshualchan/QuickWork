@@ -12,7 +12,7 @@ import AlamofireImage
 
 class DetailsViewController: UIViewController {
 
-    
+    @IBOutlet weak var msgButton: UIButton!
     @IBOutlet weak var taskImage: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
@@ -34,13 +34,22 @@ class DetailsViewController: UIViewController {
             let url = URL(string: urlString)!
             taskImage.af.setImage(withURL: url)
         }
-        
-        
         nameLabel.text = user?["name"] as? String
+        
+        let listingUser = user?.objectId as? String
+        let currentUser = PFUser.current()!.objectId as? String
+        if (currentUser == listingUser) {
+            self.msgButton.isHidden = true
+        }
+        
         
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func messageButton(_ sender: Any) {
+        //query.limit = 20
+       
+    }
     
     /*
     // MARK: - Navigation
