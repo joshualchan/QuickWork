@@ -8,5 +8,6 @@ target 'QuickWork' do
   # Pods for QuickWork
   pod "Parse"
   pod "AlamofireImage"
+  pod "MessageKit"
 
 end
