@@ -718,13 +718,16 @@
         <scene sceneID="9EN-0m-UAu">
             <objects>
                 <viewController id="Jv2-2Y-6dM" customClass="ChatViewController" customModule="QuickWork" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="San-LC-wZX">
+                    <view key="view" contentMode="scaleToFill" id="San-LC-wZX" customClass="MessagesCollectionView" customModule="MessageKit">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="vGc-Tn-Olq"/>
                     </view>
                     <navigationItem key="navigationItem" id="ExW-W6-jy5"/>
+                    <connections>
+                        <outlet property="messagesCollectionView" destination="San-LC-wZX" id="j4x-Db-vtj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MyA-Yz-hKS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
