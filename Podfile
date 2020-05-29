@@ -9,5 +9,6 @@ target 'QuickWork' do
   pod "Parse"
   pod "AlamofireImage"
   pod "MessageKit"
+  pod "MessageInputBar"
 
 end
