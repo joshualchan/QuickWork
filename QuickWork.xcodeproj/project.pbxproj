@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2EC0ED2927833F406A258788 /* Pods_QuickWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA01C9C9C825048B335D59A /* Pods_QuickWork.framework */; };
+		5B33A8E024821DBA00F829B6 /* MCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B33A8DF24821DBA00F829B6 /* MCollectionViewCell.swift */; };
 		5B5B44D624789A680074005B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B44D524789A680074005B /* AppDelegate.swift */; };
 		5B5B44D824789A680074005B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B44D724789A680074005B /* SceneDelegate.swift */; };
 		5B5B44DD24789A680074005B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B5B44DB24789A680074005B /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		3CA01C9C9C825048B335D59A /* Pods_QuickWork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickWork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F1749BCE9AC9F60BE67FD9 /* Pods-QuickWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickWork.release.xcconfig"; path = "Target Support Files/Pods-QuickWork/Pods-QuickWork.release.xcconfig"; sourceTree = "<group>"; };
+		5B33A8DF24821DBA00F829B6 /* MCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCollectionViewCell.swift; sourceTree = "<group>"; };
 		5B5B44D224789A680074005B /* QuickWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B5B44D524789A680074005B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B5B44D724789A680074005B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				5B6F23BE247F70D900F4C4B1 /* MessageCell.swift */,
 				BF38695E247A00B900417693 /* DetailsCell.swift */,
 				5B6F23B0247B1F7500F4C4B1 /* MyListingCell.swift */,
+				5B33A8DF24821DBA00F829B6 /* MCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				5B5B44D824789A680074005B /* SceneDelegate.swift in Sources */,
 				BF38695B2479FECC00417693 /* LoginViewController.swift in Sources */,
 				BF3869592479FE9200417693 /* BasicInfoViewController.swift in Sources */,
+				5B33A8E024821DBA00F829B6 /* MCollectionViewCell.swift in Sources */,
 				5B6F23BD247F706900F4C4B1 /* MessagesViewController.swift in Sources */,
 				BF3869532479FCC500417693 /* FeedViewController.swift in Sources */,
 				5B6F23BB247F6D7E00F4C4B1 /* ChatViewController.swift in Sources */,

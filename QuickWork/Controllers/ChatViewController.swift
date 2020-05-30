@@ -13,19 +13,45 @@ import MessageInputBar
 class ChatViewController: MessagesViewController, MessageInputBarDelegate {
     
     @IBOutlet var messagesCollectionView: MessagesCollectionView!
-    let sender = Sender(senderId: (PFUser.current()! as! PFObject)["username"] as! String, displayName: (PFUser.current()! as PFObject)["name"] as! String)
-    let messages: [MessageType] = []
     var showsMessageBar = true
     let chatMessage = PFObject(className: "Message")
     let messageBar = MessageInputBar()
+    var otherUserId: String = ""
+    var messages: [PFObject] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         configureMessageInputBar()
+        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.retrieveChatMessages), userInfo: nil, repeats: true)
+    }
+    
+    @objc func retrieveChatMessages() {
+        // RETRIEVE MESSAGES
+        let query1 = PFQuery(className: "Messages")
+        let query2 = PFQuery(className: "Messages")
         
-        //messagesCollectionView.messagesDataSource = self
-        //messagesCollectionView.messagesLayoutDelegate = self
-        //messagesCollectionView.messagesDisplayDelegate = self
-        // Do any additional setup after loading the view.
+        query1.whereKey("sender", equalTo: PFUser.current()!)
+        query1.whereKey("recipient", equalTo: otherUserId)
+        
+        query2.whereKey("sender", equalTo: otherUserId)
+        query2.whereKey("recipient", equalTo: PFUser.current()!)
+        
+        query1.findObjectsInBackground {(messages, error) in
+            if let messages = messages {
+                self.messages.append(contentsOf: messages)
+                self.messagesCollectionView.reloadData()
+            } else {
+                print(error!.localizedDescription)
+            }
+        }
+        query2.findObjectsInBackground {(messages, error) in
+            if let messages = messages {
+                self.messages.append(contentsOf: messages)
+                self.messagesCollectionView.reloadData()
+            } else {
+                print(error!.localizedDescription)
+            }
+        }
+        
     }
     
     @objc func keyboardWillBeHidden(note: Notification) {
@@ -43,8 +69,18 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate {
     
     func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
         //create the message
-        
-        
+        if messageBar.inputTextView.text != nil {
+            chatMessage["sender"] = PFUser.current()
+            chatMessage["recipient"] = otherUserId
+            chatMessage["message"] = messageBar.inputTextView.text as! String
+            chatMessage.saveInBackground { (success, error) in
+                if error != nil {
+                    print("Message could not be sent!")
+                } else {
+                    print("Message sent!")
+                }
+            }
+        }
        //save the message
         
         messagesCollectionView.reloadData()
@@ -70,4 +106,3 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate {
     }
 
 }
-

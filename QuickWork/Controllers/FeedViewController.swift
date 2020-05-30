@@ -106,10 +106,3 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
 }
-
-
-
-
-
-
-
