@@ -310,25 +310,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell" rowHeight="110" id="B8V-mJ-hH2" customClass="MessageCell" customModule="QuickWork" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="110"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell" rowHeight="149" id="B8V-mJ-hH2" customClass="MessageCell" customModule="QuickWork" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="149"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B8V-mJ-hH2" id="Tjm-4Z-Vrk">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="149"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NRQ-e6-6ca">
-                                                    <rect key="frame" x="312" y="11" width="45" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XoQ-N3-egd">
-                                                    <rect key="frame" x="15" y="47" width="342" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other user" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAv-xM-o17">
                                                     <rect key="frame" x="15" y="11" width="82" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -338,20 +326,12 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="GAv-xM-o17" firstAttribute="top" secondItem="Tjm-4Z-Vrk" secondAttribute="topMargin" id="2We-Lg-iB1"/>
-                                                <constraint firstItem="NRQ-e6-6ca" firstAttribute="top" secondItem="Tjm-4Z-Vrk" secondAttribute="topMargin" id="6yS-DJ-YNg"/>
-                                                <constraint firstItem="XoQ-N3-egd" firstAttribute="leading" secondItem="Tjm-4Z-Vrk" secondAttribute="leadingMargin" id="7ez-98-nGq"/>
-                                                <constraint firstItem="XoQ-N3-egd" firstAttribute="top" secondItem="NRQ-e6-6ca" secondAttribute="bottom" constant="15" id="V3k-7A-3jf"/>
-                                                <constraint firstItem="XoQ-N3-egd" firstAttribute="top" secondItem="GAv-xM-o17" secondAttribute="bottom" constant="15" id="W1d-oS-Doe"/>
-                                                <constraint firstItem="XoQ-N3-egd" firstAttribute="trailing" secondItem="Tjm-4Z-Vrk" secondAttribute="trailingMargin" id="foM-NF-LpY"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="NRQ-e6-6ca" secondAttribute="trailing" id="pV6-38-Mob"/>
                                                 <constraint firstItem="GAv-xM-o17" firstAttribute="leading" secondItem="Tjm-4Z-Vrk" secondAttribute="leadingMargin" id="xKn-Og-zh6"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="dateLabel" destination="NRQ-e6-6ca" id="KXd-C8-npK"/>
-                                            <outlet property="messageLabel" destination="XoQ-N3-egd" id="0VH-8L-mWp"/>
                                             <outlet property="otherUserLabel" destination="GAv-xM-o17" id="ffd-BO-P0O"/>
-                                            <segue destination="Jv2-2Y-6dM" kind="show" id="ddP-gJ-dyF"/>
+                                            <segue destination="Jv2-2Y-6dM" kind="show" id="Rxk-9P-Y2u"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -781,7 +761,7 @@
         <image name="placeholder" width="375" height="375"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ddP-gJ-dyF"/>
+        <segue reference="Rxk-9P-Y2u"/>
         <segue reference="IQf-fK-3lR"/>
         <segue reference="r9i-e6-7OC"/>
     </inferredMetricsTieBreakers>

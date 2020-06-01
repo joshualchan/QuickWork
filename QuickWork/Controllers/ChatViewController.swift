@@ -30,8 +30,8 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate, Messa
   
         self.title = otherUser["name"] as? String
         self.configureMessageInputBar()
-        
-        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.retrieveChatMessages), userInfo: nil, repeats: true)
+        retrieveChatMessages()
+        Timer.scheduledTimer(timeInterval: 20, target: self, selector: #selector(self.retrieveChatMessages), userInfo: nil, repeats: true)
         /*
         let sender = Sender(PFUser.current()!.objectId!, PFUser.current()!.username!)
         let currentDate = Date()
@@ -116,6 +116,7 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate, Messa
         let chatMessage = PFObject(className: "Message")
         if messageBar.inputTextView.text != nil {
             chatMessage["sender"] = PFUser.current()!.objectId!
+            chatMessage["name"] = PFUser.current()!["name"]
             chatMessage["recipient"] = otherUser.objectId!
             chatMessage["message"] = messageBar.inputTextView.text!
             chatMessage.saveInBackground { (success, error) in
@@ -123,7 +124,7 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate, Messa
                     print("Message could not be sent!")
                 } else {
                     print("Message sent!")
-                    let sender = Sender(chatMessage["sender"]! as! String, chatMessage["sender"]! as! String)
+                    let sender = Sender(chatMessage["sender"]! as! String, chatMessage["name"]! as! String)
                     let cell = Message(sender, chatMessage.objectId!, chatMessage.createdAt!, .text(chatMessage["message"] as! String))
                     self.messages.append(cell)
                     self.messagesCollectionView.reloadData()

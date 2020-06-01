@@ -9,13 +9,28 @@
 import UIKit
 import Parse
 class MsgViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
-    var messageList = [Message]()
-    var userList = [String]()
+    var messageList: [PFObject] = []
+    var userList: [String] = []
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.rowHeight = 40;
         retrieveConversations()
-        // Do any additional setup after loading the view.
+       // let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, userInfo: nil, repeats: false)
+        let q = PFQuery(className: "User")
+        /*
+        q.findObjectsInBackground { (s, e) in
+            if let s = s {
+                print("Successfully retrieved \(s.count) users.")
+                //self.messageList.append(s[0])
+            }
+        }*/
+       
+        let timer2 = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { timer in
+            self.putInMessageList()
+            self.tableView.delegate = self
+            self.tableView.dataSource = self
+        }
     }
     
     func retrieveConversations() {
@@ -28,17 +43,12 @@ class MsgViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         query1.findObjectsInBackground {(m, error) in
             if let m = m {
                 for message in m.reversed(){
-                    
                     if !self.userList.contains(message["recipient"] as! String){
-                        let sender = Sender(message["sender"]! as! String, message["sender"]! as! String)
-                        let cell = Message(sender, message.objectId!, message.createdAt!, .text(message["message"] as! String))
                         self.userList.append(message["recipient"] as! String)
-                        self.messageList.append(cell)
+                        
                     }
-
                 }
                 self.tableView.reloadData()
-                
             } else {
                 print(error!.localizedDescription)
             }
@@ -47,49 +57,50 @@ class MsgViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         query2.findObjectsInBackground {(m, error) in
             if let m = m {
                 for message in m.reversed(){
-                    let sender = Sender(PFUser.current()!.objectId!, message["sender"] as! String)
-                    let cell = Message(sender, message.objectId!, message.createdAt!, .text(message["message"] as! String))
                     if !self.userList.contains(message["sender"] as! String){
-                        let sender = Sender(message["sender"]! as! String, message["sender"]! as! String)
-                        let cell = Message(sender, message.objectId!, message.createdAt!, .text(message["message"] as! String))
-                        self.userList.append(message["recipient"] as! String)
-                        self.messageList.append(cell)
-                        self.tableView.reloadData()
-                    } else{
-                        let range = 0...self.messageList.count-1
-                        for i in range {
-                            if self.messageList[i].sender.senderId == PFUser.current()!.objectId! && self.messageList[i].sentDate < message.createdAt! {
-                                let sender = Sender(message["sender"]! as! String, message["sender"]! as! String)
-                                let cell = Message(sender, message.objectId!, message.createdAt!, .text(message["message"] as! String))
-                                self.messageList[i] = cell
-                            }
-                        }
-                        
-                    
+                        self.userList.append(message["sender"] as! String)
                     }
                 }
-                self.messageList.sort { $0.sentDate > $1.sentDate}
-                print(self.messageList)
                 self.tableView.reloadData()
             } else {
                 print(error!.localizedDescription)
+                
             }
         }
     }
+    
+    func putInMessageList() {
+        print(userList)
+        for userId in userList {
+            let q = PFUser.query()
+               q?.whereKey("objectId", equalTo: userId)
+               q?.findObjectsInBackground(block: { (s, e) in
+                   if let s = s {
+                       print("Successfully retrieved \(s.count) users.")
+                       self.messageList.append(s[0])
+                   }
+                self.tableView.reloadData()
+            })
+        }
+  
+        
+    }
+    
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messageList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Cells.message, for: indexPath) as! MessageCell
-        let msg = messageList[indexPath.row]
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
-        cell.otherUserLabel.text = msg.sender.displayName
-        cell.dateLabel.text = formatter.string(from: msg.sentDate)
-        cell.messageLabel.text = msg.messageId
-        
+        if messageList.count > 0 {
+            let user = messageList[indexPath.row]
+            cell.otherUserLabel.text = user["name"] as? String
+        }
+
         return cell
+        
     }
     
 
@@ -99,23 +110,19 @@ class MsgViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         // Pass the selected object to the new view controller.
                //let listingUserId = user?.objectId as? String
         
-        if sender is UITableViewCell{
-            let cell = sender as! UITableViewCell
-            let indexPath = tableView.indexPath(for: cell)!
-            let details = messageList[indexPath.row]
-            let p = PFQuery(className: "User")
-            p.whereKey("objectId", equalTo: details.sender.senderId)
-            p.findObjectsInBackground { (u, error) in
-                if let u = u {
-                    let chatViewController = segue.destination as! ChatViewController
-                    chatViewController.otherUser = u[0]
-                    
-                    self.tableView.deselectRow(at: indexPath, animated: true)
-                }
-            }
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for: cell)!
+        let details = messageList[indexPath.row]
+        let chatViewController = segue.destination as! ChatViewController
+        chatViewController.otherUser = details as! PFUser
+        self.tableView.deselectRow(at: indexPath, animated: true)
 
-        }
+            
     }
+        
+
+        
+    
     
 
 }

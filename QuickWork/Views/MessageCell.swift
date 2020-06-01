@@ -11,8 +11,6 @@ import UIKit
 class MessageCell: UITableViewCell {
     
     @IBOutlet weak var otherUserLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var messageLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
