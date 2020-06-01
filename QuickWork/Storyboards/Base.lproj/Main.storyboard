@@ -300,7 +300,7 @@
         <!--Messages-->
         <scene sceneID="JOx-GV-O78">
             <objects>
-                <viewController id="Xj4-xD-zJ4" customClass="MessagesViewController" customModule="QuickWork" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Xj4-xD-zJ4" customClass="MsgViewController" customModule="QuickWork" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o3s-71-uwj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -361,6 +361,9 @@
                         <viewLayoutGuide key="safeArea" id="rHR-70-EJw"/>
                     </view>
                     <navigationItem key="navigationItem" title="Messages" id="c5z-Gt-fSf"/>
+                    <connections>
+                        <outlet property="tableView" destination="gD9-Xt-eWu" id="PFm-hA-5EE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uYB-Yb-xqX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -729,12 +732,6 @@
         <scene sceneID="9EN-0m-UAu">
             <objects>
                 <viewController storyboardIdentifier="ChatVC" id="Jv2-2Y-6dM" customClass="ChatViewController" customModule="QuickWork" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="San-LC-wZX" userLabel="View">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="vGc-Tn-Olq"/>
-                    </view>
                     <navigationItem key="navigationItem" id="ExW-W6-jy5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MyA-Yz-hKS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -784,7 +781,7 @@
         <image name="placeholder" width="375" height="375"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="sjY-U3-ie6"/>
+        <segue reference="ddP-gJ-dyF"/>
         <segue reference="IQf-fK-3lR"/>
         <segue reference="r9i-e6-7OC"/>
     </inferredMetricsTieBreakers>

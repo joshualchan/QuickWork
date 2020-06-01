@@ -15,9 +15,9 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate, Messa
     
     //@IBOutlet weak var messagesCollectionView: MessagesCollectionView!
     var showsMessageBar = true
-    var messagesCollectionView = MessagesCollectionView()
+    //var messagesCollectionView = MessagesCollectionView()
     let messageBar = MessageInputBar()
-    var otherUserId: String = ""
+    var otherUser = PFObject(className: "User")
     var messages: [Message] = []
     
     let formatter: DateFormatter = {
@@ -27,32 +27,32 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate, Messa
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureMessageInputBar()
+  
+        self.title = otherUser["name"] as? String
+        self.configureMessageInputBar()
         
-        //Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(self.retrieveChatMessages), userInfo: nil, repeats: true)
-        messagesCollectionView.messagesDataSource = self
-        messagesCollectionView.messagesLayoutDelegate = self
-        messagesCollectionView.messagesDisplayDelegate = self
-
-    }
-    
-   
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        //retrieveChatMessages()
+        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.retrieveChatMessages), userInfo: nil, repeats: true)
+        /*
         let sender = Sender(PFUser.current()!.objectId!, PFUser.current()!.username!)
         let currentDate = Date()
         let testMessage = Message(sender, PFUser.current()!.objectId!, currentDate, .text("I love pizza, what is your favorite kind?"))
-        insertNewMessage(testMessage)
-    }
+        insertNewMessage(testMessage)*/
+        messagesCollectionView.messagesDataSource = self
+        messagesCollectionView.messagesLayoutDelegate = self
+        messagesCollectionView.messagesDisplayDelegate = self
+        messagesCollectionView.messagesDataSource = self
+        
+        }
+        
+     
     
-    private func insertNewMessage(_ message: Message) {
+    
   
-      
-      messages.append(message)
-      messages.sort { $0.sentDate < $1.sentDate}
+    private func insertNewMessage(_ message: Message) {
+        messages.append(message)
+        messages.sort { $0.sentDate < $1.sentDate}
 
-      messagesCollectionView.reloadData()
+        messagesCollectionView.reloadData()
       
       
     }
@@ -63,9 +63,9 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate, Messa
         let query1 = PFQuery(className: "Message")
         let query2 = PFQuery(className: "Message")
         query1.whereKey("sender", equalTo: PFUser.current()!.objectId!)
-        query1.whereKey("recipient", equalTo: otherUserId)
+        query1.whereKey("recipient", equalTo: otherUser.objectId!)
         
-        query2.whereKey("sender", equalTo: otherUserId)
+        query2.whereKey("sender", equalTo: otherUser.objectId!)
         query2.whereKey("recipient", equalTo: PFUser.current()!.objectId!)
         
         query1.findObjectsInBackground {(m, error) in
@@ -76,12 +76,10 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate, Messa
                     let sender = Sender(message["sender"]! as! String, message["sender"]! as! String)
                     let cell = Message(sender, message.objectId!, message.createdAt!, .text(message["message"] as! String))
                    
-                    self.messages.append(cell)
-                    self.messages.sort { $0.sentDate < $1.sentDate}
+                    self.insertNewMessage(cell)
                     
                 }
-                print(self.messages.count)
-                self.messagesCollectionView.reloadData()
+                
             } else {
                 print(error!.localizedDescription)
             }
@@ -90,12 +88,10 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate, Messa
         query2.findObjectsInBackground {(m, error) in
             if let m = m {
                 for message in m{
-                    let sender = Sender(PFUser.current()!.objectId!, message["sender"] as! String)
+                    let sender = Sender(message["sender"]! as! String, message["sender"] as! String)
                     let cell = Message(sender, message.objectId!, message.createdAt!, .text(message["message"] as! String))
-                    self.messages.append(cell)
-                    self.messages.sort { $0.sentDate < $1.sentDate}
+                    self.insertNewMessage(cell)
                 }
-                self.messagesCollectionView.reloadData()
             } else {
                 print(error!.localizedDescription)
             }
@@ -120,7 +116,7 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate, Messa
         let chatMessage = PFObject(className: "Message")
         if messageBar.inputTextView.text != nil {
             chatMessage["sender"] = PFUser.current()!.objectId!
-            chatMessage["recipient"] = otherUserId
+            chatMessage["recipient"] = otherUser.objectId!
             chatMessage["message"] = messageBar.inputTextView.text!
             chatMessage.saveInBackground { (success, error) in
                 if error != nil {
@@ -182,7 +178,7 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate, Messa
       in messagesCollectionView: MessagesCollectionView) -> UIColor {
       
       // 1
-      return isFromCurrentSender(message: message) ? .blue : .blue
+      return isFromCurrentSender(message: message) ? .blue : .gray
     }
 
     func shouldDisplayHeader(for message: MessageType, at indexPath: IndexPath,
@@ -206,7 +202,7 @@ class ChatViewController: MessagesViewController, MessageInputBarDelegate, Messa
 
 extension ChatViewController: MessagesDataSource {
     func currentSender() -> SenderType {
-        return Sender(PFUser.current()!.objectId!, PFUser.current()!.objectId!)
+        return Sender(PFUser.current()!.objectId!, PFUser.current()!["name"] as! String)
     }
     
     func numberOfSections(in messagesCollectionView: MessagesCollectionView) -> Int {
@@ -229,7 +225,7 @@ extension ChatViewController: MessagesDataSource {
           string: name,
           attributes: [
             .font: UIFont.preferredFont(forTextStyle: .caption1),
-            .foregroundColor: UIColor(white: 0.3, alpha: 1)
+           
           ]
         )
     }

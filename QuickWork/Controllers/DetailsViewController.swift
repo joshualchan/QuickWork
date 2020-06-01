@@ -61,9 +61,9 @@ class DetailsViewController: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         let user = details["user"] as? PFUser
-        let listingUserId = user?.objectId as? String
+        //let listingUserId = user?.objectId as? String
         let chatViewController = segue.destination as! ChatViewController
-        chatViewController.otherUserId = listingUserId!
+        chatViewController.otherUser = user!
         
     }
     

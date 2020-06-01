@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2EC0ED2927833F406A258788 /* Pods_QuickWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA01C9C9C825048B335D59A /* Pods_QuickWork.framework */; };
+		5B33A8EC2484A5CC00F829B6 /* MsgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B33A8EB2484A5CC00F829B6 /* MsgViewController.swift */; };
 		5B5B44D624789A680074005B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B44D524789A680074005B /* AppDelegate.swift */; };
 		5B5B44D824789A680074005B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B44D724789A680074005B /* SceneDelegate.swift */; };
 		5B5B44DD24789A680074005B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B5B44DB24789A680074005B /* Main.storyboard */; };
@@ -16,7 +17,6 @@
 		5B6F23B1247B1F7500F4C4B1 /* MyListingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6F23B0247B1F7500F4C4B1 /* MyListingCell.swift */; };
 		5B6F23B5247B32A900F4C4B1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6F23B4247B32A900F4C4B1 /* TabBarController.swift */; };
 		5B6F23BB247F6D7E00F4C4B1 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6F23BA247F6D7E00F4C4B1 /* ChatViewController.swift */; };
-		5B6F23BD247F706900F4C4B1 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6F23BC247F706900F4C4B1 /* MessagesViewController.swift */; };
 		5B6F23BF247F70D900F4C4B1 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6F23BE247F70D900F4C4B1 /* MessageCell.swift */; };
 		BF3869512479F7D100417693 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3869502479F7D100417693 /* Constants.swift */; };
 		BF3869532479FCC500417693 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3869522479FCC500417693 /* FeedViewController.swift */; };
@@ -31,6 +31,7 @@
 /* Begin PBXFileReference section */
 		3CA01C9C9C825048B335D59A /* Pods_QuickWork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickWork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F1749BCE9AC9F60BE67FD9 /* Pods-QuickWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickWork.release.xcconfig"; path = "Target Support Files/Pods-QuickWork/Pods-QuickWork.release.xcconfig"; sourceTree = "<group>"; };
+		5B33A8EB2484A5CC00F829B6 /* MsgViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgViewController.swift; sourceTree = "<group>"; };
 		5B5B44D224789A680074005B /* QuickWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B5B44D524789A680074005B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B5B44D724789A680074005B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,7 +42,6 @@
 		5B6F23B0247B1F7500F4C4B1 /* MyListingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListingCell.swift; sourceTree = "<group>"; };
 		5B6F23B4247B32A900F4C4B1 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		5B6F23BA247F6D7E00F4C4B1 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		5B6F23BC247F706900F4C4B1 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		5B6F23BE247F70D900F4C4B1 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		B7857C179043D7D6A86DA94E /* Pods-QuickWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickWork.debug.xcconfig"; path = "Target Support Files/Pods-QuickWork/Pods-QuickWork.debug.xcconfig"; sourceTree = "<group>"; };
 		BF3869502479F7D100417693 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 				BF3869562479FE5600417693 /* AddListingViewController.swift */,
 				5B6F23B4247B32A900F4C4B1 /* TabBarController.swift */,
 				5B6F23BA247F6D7E00F4C4B1 /* ChatViewController.swift */,
-				5B6F23BC247F706900F4C4B1 /* MessagesViewController.swift */,
+				5B33A8EB2484A5CC00F829B6 /* MsgViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -282,11 +282,11 @@
 				5B5B44D824789A680074005B /* SceneDelegate.swift in Sources */,
 				BF38695B2479FECC00417693 /* LoginViewController.swift in Sources */,
 				BF3869592479FE9200417693 /* BasicInfoViewController.swift in Sources */,
-				5B6F23BD247F706900F4C4B1 /* MessagesViewController.swift in Sources */,
 				BF3869532479FCC500417693 /* FeedViewController.swift in Sources */,
 				5B6F23BB247F6D7E00F4C4B1 /* ChatViewController.swift in Sources */,
 				5B6F23BF247F70D900F4C4B1 /* MessageCell.swift in Sources */,
 				5B6F23B5247B32A900F4C4B1 /* TabBarController.swift in Sources */,
+				5B33A8EC2484A5CC00F829B6 /* MsgViewController.swift in Sources */,
 				5B6F23B1247B1F7500F4C4B1 /* MyListingCell.swift in Sources */,
 				BF3869512479F7D100417693 /* Constants.swift in Sources */,
 			);
