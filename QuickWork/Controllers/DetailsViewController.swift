@@ -19,6 +19,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var taskNameLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     
+    @IBOutlet weak var contactLabel: UILabel!
     var details = PFObject(className: "Tasks")
     
     override func viewDidLoad() {
@@ -35,7 +36,7 @@ class DetailsViewController: UIViewController {
             taskImage.af.setImage(withURL: url)
         }
         nameLabel.text = user?["name"] as? String
-        
+        contactLabel.text = user?["number"] as? String
         let listingUser = user?.objectId as? String
         let currentUser = PFUser.current()!.objectId as? String
         if (currentUser == listingUser) {

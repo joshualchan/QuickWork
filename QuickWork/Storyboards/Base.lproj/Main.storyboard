@@ -419,16 +419,24 @@
                                     <segue destination="Jv2-2Y-6dM" kind="show" id="sjY-U3-ie6"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lP2-j5-x6k">
+                                <rect key="frame" x="180" y="217" width="195" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="EpC-b4-tUJ" firstAttribute="trailing" secondItem="QhG-cf-nS9" secondAttribute="trailing" constant="20" id="49P-4e-pKa"/>
                             <constraint firstItem="2cw-q1-u8t" firstAttribute="top" secondItem="bz9-dN-gr2" secondAttribute="bottom" constant="30" id="5oP-Vs-2fe"/>
                             <constraint firstItem="2cw-q1-u8t" firstAttribute="leading" secondItem="L8p-kz-bac" secondAttribute="trailing" constant="10" id="6qW-p0-Prj"/>
+                            <constraint firstItem="lP2-j5-x6k" firstAttribute="leading" secondItem="L8p-kz-bac" secondAttribute="trailing" constant="10" id="70n-X6-LRm"/>
                             <constraint firstItem="D4N-jz-hI3" firstAttribute="leading" secondItem="EpC-b4-tUJ" secondAttribute="leading" constant="20" id="7cJ-ny-YMu"/>
                             <constraint firstItem="EpC-b4-tUJ" firstAttribute="trailing" secondItem="bz9-dN-gr2" secondAttribute="trailing" constant="10" id="7tr-2R-4c8"/>
                             <constraint firstItem="QhG-cf-nS9" firstAttribute="top" secondItem="EpC-b4-tUJ" secondAttribute="top" constant="20" id="8Rt-fq-jNH"/>
                             <constraint firstItem="bz9-dN-gr2" firstAttribute="leading" secondItem="L8p-kz-bac" secondAttribute="trailing" constant="10" id="DIS-mU-BhR"/>
+                            <constraint firstItem="2cw-q1-u8t" firstAttribute="leading" secondItem="L8p-kz-bac" secondAttribute="trailing" constant="10" id="FUs-z5-Wgv"/>
                             <constraint firstItem="DVW-Bc-2BE" firstAttribute="top" secondItem="D4N-jz-hI3" secondAttribute="bottom" constant="30" id="IHC-Jz-chD"/>
                             <constraint firstItem="QhG-cf-nS9" firstAttribute="leading" secondItem="L8p-kz-bac" secondAttribute="trailing" constant="10" id="MGM-RD-sWO"/>
                             <constraint firstItem="EpC-b4-tUJ" firstAttribute="trailing" secondItem="DVW-Bc-2BE" secondAttribute="trailing" constant="20" id="WNv-j5-PP3"/>
@@ -437,13 +445,16 @@
                             <constraint firstItem="EpC-b4-tUJ" firstAttribute="trailing" secondItem="2cw-q1-u8t" secondAttribute="trailing" constant="10" id="cRV-vt-XW7"/>
                             <constraint firstItem="L8p-kz-bac" firstAttribute="leading" secondItem="EpC-b4-tUJ" secondAttribute="leading" constant="20" id="dAP-f5-p7W"/>
                             <constraint firstItem="EpC-b4-tUJ" firstAttribute="trailing" secondItem="D4N-jz-hI3" secondAttribute="trailing" constant="20" id="gtP-20-dnO"/>
+                            <constraint firstItem="EpC-b4-tUJ" firstAttribute="trailing" secondItem="lP2-j5-x6k" secondAttribute="trailing" id="jCh-O0-tIH"/>
                             <constraint firstItem="L8p-kz-bac" firstAttribute="top" secondItem="EpC-b4-tUJ" secondAttribute="top" constant="20" id="kZ6-u6-ZbZ"/>
+                            <constraint firstItem="lP2-j5-x6k" firstAttribute="top" secondItem="2cw-q1-u8t" secondAttribute="bottom" constant="30" id="v1S-Qp-w58"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EpC-b4-tUJ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Details" id="pH9-N8-QLD"/>
                     <connections>
                         <outlet property="cityLabel" destination="2cw-q1-u8t" id="nzW-JZ-6Lw"/>
+                        <outlet property="contactLabel" destination="lP2-j5-x6k" id="PER-wy-5GJ"/>
                         <outlet property="descriptionLabel" destination="D4N-jz-hI3" id="mR3-cz-VJm"/>
                         <outlet property="msgButton" destination="DVW-Bc-2BE" id="6G5-PQ-vvB"/>
                         <outlet property="nameLabel" destination="QhG-cf-nS9" id="9wo-9f-rNf"/>
@@ -717,17 +728,14 @@
         <!--Chat View Controller-->
         <scene sceneID="9EN-0m-UAu">
             <objects>
-                <viewController id="Jv2-2Y-6dM" customClass="ChatViewController" customModule="QuickWork" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="San-LC-wZX" customClass="MessagesCollectionView" customModule="MessageKit">
+                <viewController storyboardIdentifier="ChatVC" id="Jv2-2Y-6dM" customClass="ChatViewController" customModule="QuickWork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="San-LC-wZX" userLabel="View">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="vGc-Tn-Olq"/>
                     </view>
                     <navigationItem key="navigationItem" id="ExW-W6-jy5"/>
-                    <connections>
-                        <outlet property="messagesCollectionView" destination="San-LC-wZX" id="j4x-Db-vtj"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MyA-Yz-hKS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -776,7 +784,7 @@
         <image name="placeholder" width="375" height="375"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ddP-gJ-dyF"/>
+        <segue reference="sjY-U3-ie6"/>
         <segue reference="IQf-fK-3lR"/>
         <segue reference="r9i-e6-7OC"/>
     </inferredMetricsTieBreakers>
