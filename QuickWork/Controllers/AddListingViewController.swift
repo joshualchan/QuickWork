@@ -66,7 +66,6 @@ class AddListingViewController: UIViewController, UIImagePickerControllerDelegat
     
     
     @IBAction func onPicture(_ sender: Any) {
-        print("in")
         let picker = UIImagePickerController()
         picker.delegate = self
         picker.allowsEditing = true

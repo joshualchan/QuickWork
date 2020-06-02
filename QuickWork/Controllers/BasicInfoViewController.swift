@@ -9,12 +9,13 @@
 import UIKit
 import Parse
 
-class BasicInfoViewController: UIViewController, UITextFieldDelegate {
+class BasicInfoViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
  
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var phoneNumberField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var profilePicture: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,23 +46,53 @@ class BasicInfoViewController: UIViewController, UITextFieldDelegate {
             PFUser.current()?.setObject(email, forKey: "email")
             PFUser.current()?.setObject(number, forKey: "number")
             PFUser.current()?.setObject(name, forKey: "name")
-            PFUser.current()?.saveInBackground()
+            if let imageData = profilePicture.image!.pngData() {
             
-            self.performSegue(withIdentifier: Segues.personalInfo, sender: nil)
+                if let file = PFFileObject(name: "image.png", data: imageData) {
+
+                    PFUser.current()?.setObject(file, forKey: "picture")
+                }
+            }
+            
+            
+            PFUser.current()?.saveInBackground(block: { (success, error) in
+                if let error = error {
+                    self.errorLabel.text = error.localizedDescription
+                } else {
+                    self.performSegue(withIdentifier: Segues.personalInfo, sender: nil)
+                }
+            })
+
         } else {
             errorLabel.text = "All sections have to be filled out"
         }
     }
     
     
-    /*
-    // MARK: - Navigation
+    @IBAction func onPicture(_ sender: Any) {
+        let picker = UIImagePickerController()
+            picker.delegate = self
+            picker.allowsEditing = true
+           
+            if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                picker.sourceType = .camera
+            } else {
+                picker.sourceType = .photoLibrary
+            }
+           
+            present(picker, animated: true, completion: nil)
+        }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+        
+        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+            let image = info[.editedImage] as! UIImage
+            
+            let size = CGSize(width: 300, height: 300)
+            let scaledImage = image.af.imageScaled(to: size)
+            
+            profilePicture.image = scaledImage
+            dismiss(animated: true, completion: nil)
+        }
+    
 
 }

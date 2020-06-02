@@ -26,6 +26,7 @@
 		BF38695B2479FECC00417693 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF38695A2479FECC00417693 /* LoginViewController.swift */; };
 		BF38695D2479FEFE00417693 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF38695C2479FEFE00417693 /* DetailsViewController.swift */; };
 		BF38695F247A00B900417693 /* DetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF38695E247A00B900417693 /* DetailsCell.swift */; };
+		BF6BFEFC2485F26C00324EE1 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6BFEFB2485F26C00324EE1 /* EditProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		BF38695A2479FECC00417693 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BF38695C2479FEFE00417693 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		BF38695E247A00B900417693 /* DetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCell.swift; sourceTree = "<group>"; };
+		BF6BFEFB2485F26C00324EE1 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				5B6F23B4247B32A900F4C4B1 /* TabBarController.swift */,
 				5B6F23BA247F6D7E00F4C4B1 /* ChatViewController.swift */,
 				5B33A8EB2484A5CC00F829B6 /* MsgViewController.swift */,
+				BF6BFEFB2485F26C00324EE1 /* EditProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF6BFEFC2485F26C00324EE1 /* EditProfileViewController.swift in Sources */,
 				5B5B44D624789A680074005B /* AppDelegate.swift in Sources */,
 				BF3869572479FE5600417693 /* AddListingViewController.swift in Sources */,
 				BF38695F247A00B900417693 /* DetailsCell.swift in Sources */,

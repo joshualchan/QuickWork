@@ -11,6 +11,11 @@ import Parse
 
 class MyListingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var phoneNumberLabel: UILabel!
+    @IBOutlet weak var profilePicture: UIImageView!
+    
     var myListings = [PFObject]()
     var refreshControl: UIRefreshControl!
     
@@ -21,13 +26,17 @@ class MyListingsViewController: UIViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        setProfile()
+        roundProfile()
+        
         getTasks()
         
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(getTasks), for: .valueChanged)
         tableView.addSubview(refreshControl)
         
-        // Do any additional setup after loading the view.
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -107,6 +116,30 @@ class MyListingsViewController: UIViewController, UITableViewDelegate, UITableVi
         let loginViewController = main.instantiateViewController(withIdentifier: "LoginViewController")
         let sceneDelegate = self.view.window?.windowScene?.delegate as! SceneDelegate
         sceneDelegate.window?.rootViewController = loginViewController
+    }
+    
+    func roundProfile() {
+
+        profilePicture.layer.masksToBounds = false
+       
+        profilePicture.layer.cornerRadius = profilePicture.frame.height / 2
+        profilePicture.clipsToBounds = true
+    }
+    
+    func setProfile() {
+        
+        if let user = PFUser.current() {
+            nameLabel.text = user["name"] as? String
+            emailLabel.text = user["email"] as? String
+            phoneNumberLabel.text = user["number"] as? String
+            self.navigationItem.title = user["username"] as? String
+            if let imageFile = user["picture"] as? PFFileObject {
+                if let urlString = imageFile.url {
+                    let url = URL(string: urlString)!
+                    profilePicture.af.setImage(withURL: url)
+                }
+            }
+        }
     }
     
 }
