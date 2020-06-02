@@ -666,12 +666,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pvT-X3-qKW">
-                                <rect key="frame" x="138" y="131" width="115" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Listings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cl-sm-u3k">
                                 <rect key="frame" x="144" y="182" width="87" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -684,26 +678,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCu-Fy-BA9">
+                                <rect key="frame" x="138" y="131" width="222" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="nV4-89-P4h" firstAttribute="top" secondItem="7hx-s6-3VR" secondAttribute="top" constant="15" id="0W7-4s-eAi"/>
-                            <constraint firstItem="pvT-X3-qKW" firstAttribute="top" secondItem="zHt-DA-Yhr" secondAttribute="bottom" constant="15" id="37O-0X-3iX"/>
                             <constraint firstItem="YAy-0l-PQs" firstAttribute="leading" secondItem="7hx-s6-3VR" secondAttribute="leading" id="3NJ-lI-xCq"/>
-                            <constraint firstItem="7hx-s6-3VR" firstAttribute="trailing" secondItem="pvT-X3-qKW" secondAttribute="trailing" constant="122" id="D8I-JK-Gmm"/>
                             <constraint firstItem="gKq-MJ-ttA" firstAttribute="top" secondItem="7hx-s6-3VR" secondAttribute="top" constant="15" id="DcQ-W0-t8b"/>
                             <constraint firstItem="gKq-MJ-ttA" firstAttribute="leading" secondItem="7hx-s6-3VR" secondAttribute="leading" constant="15" id="Gc0-qS-usi"/>
-                            <constraint firstItem="2cl-sm-u3k" firstAttribute="top" secondItem="pvT-X3-qKW" secondAttribute="bottom" constant="30" id="Rpr-7j-dRb"/>
                             <constraint firstItem="zHt-DA-Yhr" firstAttribute="top" secondItem="nV4-89-P4h" secondAttribute="bottom" constant="15" id="Ycv-JM-pdq"/>
                             <constraint firstItem="nV4-89-P4h" firstAttribute="leading" secondItem="gKq-MJ-ttA" secondAttribute="trailing" constant="8" id="gDI-J5-2fS"/>
                             <constraint firstItem="YAy-0l-PQs" firstAttribute="top" secondItem="2cl-sm-u3k" secondAttribute="bottom" id="io8-6x-379"/>
+                            <constraint firstItem="HCu-Fy-BA9" firstAttribute="top" secondItem="zHt-DA-Yhr" secondAttribute="bottom" constant="15" id="kRc-iX-1ay"/>
+                            <constraint firstItem="7hx-s6-3VR" firstAttribute="trailing" secondItem="HCu-Fy-BA9" secondAttribute="trailing" constant="15" id="kga-nh-LK3"/>
                             <constraint firstItem="7hx-s6-3VR" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zHt-DA-Yhr" secondAttribute="trailing" symbolic="YES" id="lRl-RX-mmI"/>
                             <constraint firstItem="7hx-s6-3VR" firstAttribute="bottom" secondItem="YAy-0l-PQs" secondAttribute="bottom" id="oEt-el-DWf"/>
                             <constraint firstItem="7hx-s6-3VR" firstAttribute="trailing" secondItem="YAy-0l-PQs" secondAttribute="trailing" id="qs1-0b-hAX"/>
-                            <constraint firstItem="pvT-X3-qKW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gKq-MJ-ttA" secondAttribute="trailing" constant="8" symbolic="YES" id="sde-xS-Yvy"/>
                             <constraint firstItem="zHt-DA-Yhr" firstAttribute="leading" secondItem="gKq-MJ-ttA" secondAttribute="trailing" constant="8" id="tQW-Rr-0KS"/>
+                            <constraint firstItem="HCu-Fy-BA9" firstAttribute="leading" secondItem="gKq-MJ-ttA" secondAttribute="trailing" constant="8" id="vIs-W3-yy6"/>
                             <constraint firstItem="7hx-s6-3VR" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nV4-89-P4h" secondAttribute="trailing" symbolic="YES" id="vo8-gd-aFq"/>
                             <constraint firstItem="2cl-sm-u3k" firstAttribute="centerX" secondItem="rvc-7B-gqs" secondAttribute="centerX" id="z29-6U-gfc"/>
+                            <constraint firstItem="2cl-sm-u3k" firstAttribute="top" secondItem="HCu-Fy-BA9" secondAttribute="bottom" constant="30" id="zQP-UI-00O"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7hx-s6-3VR"/>
                     </view>
@@ -722,7 +722,7 @@
                     <connections>
                         <outlet property="emailLabel" destination="zHt-DA-Yhr" id="4yB-4u-J78"/>
                         <outlet property="nameLabel" destination="nV4-89-P4h" id="0kd-ep-fGP"/>
-                        <outlet property="phoneNumberLabel" destination="pvT-X3-qKW" id="WJO-Xc-21j"/>
+                        <outlet property="phoneNumberLabel" destination="HCu-Fy-BA9" id="zH2-dg-67X"/>
                         <outlet property="profilePicture" destination="gKq-MJ-ttA" id="fH2-z9-bIV"/>
                         <outlet property="tableView" destination="YAy-0l-PQs" id="KeK-9H-A5C"/>
                     </connections>
@@ -982,7 +982,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="Rxk-9P-Y2u"/>
         <segue reference="n2l-uJ-PJh"/>
-        <segue reference="r9i-e6-7OC"/>
+        <segue reference="hQS-i1-tjI"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="person" catalog="system" width="128" height="117"/>
