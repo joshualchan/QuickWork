@@ -14,6 +14,7 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.selectedIndex = 1
+        self.tabBar.items?[2].title = "Messages"
         // Do any additional setup after loading the view.
     }
     
