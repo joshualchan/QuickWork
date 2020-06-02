@@ -16,6 +16,7 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
     @IBOutlet weak var usernameLabel: UITextField!
     @IBOutlet weak var phoneNumberLabel: UITextField!
     @IBOutlet weak var profilePicture: UIImageView!
+    @IBOutlet weak var errorLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +38,38 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
     }
     
     @IBAction func onConfirm(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        
+        if let user = PFUser.current() {
+        
+            if nameLabel.text != "" {
+                user["username"] = nameLabel.text
+            }
+            
+            if usernameLabel.text != "" {
+                user["username"] = usernameLabel.text
+            }
+            
+            if phoneNumberLabel.text != "" {
+                user["number"] = phoneNumberLabel.text
+            }
+            
+            if let imageData = profilePicture.image!.pngData() {
+            
+                if let file = PFFileObject(name: "image.png", data: imageData) {
+
+                    user["picture"] = file
+                }
+            }
+            
+            user.saveInBackground { (success, error) in
+                if let error = error {
+                    self.errorLabel.text = error.localizedDescription
+                } else {
+                    self.dismiss(animated: true, completion: nil)
+                }
+            }
+        }
+        
     }
     
     @IBAction func onCancel(_ sender: Any) {

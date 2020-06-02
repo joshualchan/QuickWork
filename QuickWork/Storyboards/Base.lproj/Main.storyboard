@@ -188,8 +188,8 @@
                                     <outletCollection property="gestureRecognizers" destination="mhU-1R-WOa" appends="YES" id="6g1-ce-bg8"/>
                                 </connections>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ff6-ub-HMp">
-                                <rect key="frame" x="40" y="622" width="295" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ff6-ub-HMp">
+                                <rect key="frame" x="40" y="622" width="295" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -783,6 +783,12 @@
                                     <outletCollection property="gestureRecognizers" destination="7eN-9s-fqx" appends="YES" id="iYG-at-ghG"/>
                                 </connections>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hn4-Nm-wdY">
+                                <rect key="frame" x="145.5" y="502" width="84" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9W-lj-T7u">
                                 <rect key="frame" x="15" y="137" width="79" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -805,8 +811,10 @@
                             <constraint firstItem="yqr-xl-vkE" firstAttribute="leading" secondItem="yjs-EG-29K" secondAttribute="leading" constant="15" id="UFH-OS-kP1"/>
                             <constraint firstItem="CFN-sd-Uau" firstAttribute="top" secondItem="kUm-lz-Q5L" secondAttribute="bottom" constant="15" id="YJI-ce-mqq"/>
                             <constraint firstItem="V9W-lj-T7u" firstAttribute="top" secondItem="G0N-24-Y7X" secondAttribute="bottom" constant="15" id="Z6L-7x-9bq"/>
+                            <constraint firstItem="Hn4-Nm-wdY" firstAttribute="top" secondItem="5Og-Bl-W64" secondAttribute="bottom" constant="30" id="bbD-So-Rkp"/>
                             <constraint firstItem="qPU-Az-gbZ" firstAttribute="leading" secondItem="yjs-EG-29K" secondAttribute="leading" constant="15" id="cFd-nq-OrL"/>
                             <constraint firstItem="G0N-24-Y7X" firstAttribute="top" secondItem="qPU-Az-gbZ" secondAttribute="bottom" constant="8" id="dOZ-vo-KcI"/>
+                            <constraint firstItem="Hn4-Nm-wdY" firstAttribute="centerX" secondItem="cjA-hL-ei2" secondAttribute="centerX" id="gXl-zN-u9e"/>
                             <constraint firstItem="yqr-xl-vkE" firstAttribute="top" secondItem="xUb-eL-3oM" secondAttribute="bottom" constant="15" id="i1i-rg-vvT"/>
                             <constraint firstItem="yjs-EG-29K" firstAttribute="trailing" secondItem="G0N-24-Y7X" secondAttribute="trailing" constant="15" id="jMF-aY-tpc"/>
                             <constraint firstItem="xUb-eL-3oM" firstAttribute="leading" secondItem="yjs-EG-29K" secondAttribute="leading" constant="15" id="k8O-cE-JJm"/>
@@ -830,6 +838,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="errorLabel" destination="Hn4-Nm-wdY" id="Mlm-jl-UJc"/>
                         <outlet property="nameLabel" destination="G0N-24-Y7X" id="jj0-tl-YAR"/>
                         <outlet property="phoneNumberLabel" destination="kUm-lz-Q5L" id="XRu-yU-b6a"/>
                         <outlet property="profilePicture" destination="5Og-Bl-W64" id="SxU-bE-pAA"/>
@@ -971,9 +980,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="sjY-U3-ie6"/>
+        <segue reference="Rxk-9P-Y2u"/>
         <segue reference="n2l-uJ-PJh"/>
-        <segue reference="hQS-i1-tjI"/>
+        <segue reference="r9i-e6-7OC"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="person" catalog="system" width="128" height="117"/>
