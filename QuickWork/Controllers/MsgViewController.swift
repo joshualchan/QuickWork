@@ -117,8 +117,9 @@ class MsgViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         chatViewController.otherUser = details as! PFUser
         self.tableView.deselectRow(at: indexPath, animated: true)
 
-            
+        
     }
+    
         
 
         
