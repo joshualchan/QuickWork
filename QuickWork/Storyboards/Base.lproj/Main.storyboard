@@ -102,11 +102,69 @@
                         <outlet property="usernameField" destination="W9i-M9-jrk" id="QB7-D3-eOk"/>
                         <segue destination="lJH-EY-ZnP" kind="presentation" identifier="signUpSegue" modalPresentationStyle="fullScreen" id="tvc-Xf-kPR"/>
                         <segue destination="USd-od-rcq" kind="presentation" identifier="signInSegue" modalPresentationStyle="fullScreen" id="IQf-fK-3lR"/>
+                        <segue destination="NCh-SO-ba4" kind="presentation" modalPresentationStyle="fullScreen" id="6Hd-m1-8dn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7y3-QK-a5q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="869.60000000000002" y="-90.404797601199405"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="F3P-y3-9eh">
+            <objects>
+                <viewController id="NCh-SO-ba4" customClass="SignUpViewController" customModule="QuickWork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mmg-1l-kKC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Username" translatesAutoresizingMaskIntoConstraints="NO" id="3cP-vX-rSx">
+                                <rect key="frame" x="30" y="186" width="80" height="22"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Password" translatesAutoresizingMaskIntoConstraints="NO" id="S5y-6w-S65">
+                                <rect key="frame" x="30" y="273" width="76" height="22"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sign Up Heading" translatesAutoresizingMaskIntoConstraints="NO" id="B0G-WC-BcD">
+                                <rect key="frame" x="30" y="120" width="103" height="36"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gwX-v2-n2t">
+                                <rect key="frame" x="30" y="301" width="315" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jp-ws-RVc">
+                                <rect key="frame" x="30" y="385" width="315" height="49"/>
+                                <state key="normal" image="Done button"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ySc-L1-40j">
+                                <rect key="frame" x="30" y="214" width="315" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="S5y-6w-S65" firstAttribute="leading" secondItem="jqJ-c0-ekY" secondAttribute="leading" constant="30" id="4iD-9k-nIE"/>
+                            <constraint firstItem="S5y-6w-S65" firstAttribute="top" secondItem="ySc-L1-40j" secondAttribute="bottom" constant="25" id="8cV-ho-W35"/>
+                            <constraint firstItem="3cP-vX-rSx" firstAttribute="top" secondItem="B0G-WC-BcD" secondAttribute="bottom" constant="30" id="Ied-zo-Jie"/>
+                            <constraint firstItem="9jp-ws-RVc" firstAttribute="leading" secondItem="jqJ-c0-ekY" secondAttribute="leading" constant="30" id="KGU-0O-Sta"/>
+                            <constraint firstItem="B0G-WC-BcD" firstAttribute="top" secondItem="jqJ-c0-ekY" secondAttribute="top" constant="120" id="KR6-e6-b9P"/>
+                            <constraint firstItem="jqJ-c0-ekY" firstAttribute="trailing" secondItem="9jp-ws-RVc" secondAttribute="trailing" constant="30" id="L0z-9j-1Qy"/>
+                            <constraint firstItem="jqJ-c0-ekY" firstAttribute="trailing" secondItem="gwX-v2-n2t" secondAttribute="trailing" constant="30" id="LVq-Sa-t5d"/>
+                            <constraint firstItem="B0G-WC-BcD" firstAttribute="leading" secondItem="jqJ-c0-ekY" secondAttribute="leading" constant="30" id="RFq-zO-fTN"/>
+                            <constraint firstItem="jqJ-c0-ekY" firstAttribute="trailing" secondItem="ySc-L1-40j" secondAttribute="trailing" constant="30" id="Rhi-4q-C3F"/>
+                            <constraint firstItem="ySc-L1-40j" firstAttribute="leading" secondItem="jqJ-c0-ekY" secondAttribute="leading" constant="30" id="SfN-Ct-1ze"/>
+                            <constraint firstItem="ySc-L1-40j" firstAttribute="top" secondItem="3cP-vX-rSx" secondAttribute="bottom" constant="6" id="ZRx-hO-bLv"/>
+                            <constraint firstItem="gwX-v2-n2t" firstAttribute="top" secondItem="S5y-6w-S65" secondAttribute="bottom" constant="6" id="arY-uc-sPr"/>
+                            <constraint firstItem="gwX-v2-n2t" firstAttribute="leading" secondItem="jqJ-c0-ekY" secondAttribute="leading" constant="30" id="clh-Ez-R9Q"/>
+                            <constraint firstItem="3cP-vX-rSx" firstAttribute="leading" secondItem="jqJ-c0-ekY" secondAttribute="leading" constant="30" id="xDC-Eu-kh4"/>
+                            <constraint firstItem="9jp-ws-RVc" firstAttribute="top" secondItem="gwX-v2-n2t" secondAttribute="bottom" constant="50" id="xKM-hw-Ytq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jqJ-c0-ekY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nS0-iJ-rzH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="428" y="725.48725637181417"/>
         </scene>
         <!--Basic Info View Controller-->
         <scene sceneID="IKP-rX-L1u">
@@ -220,7 +278,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="869.60000000000002" y="711.99400299850083"/>
+            <point key="canvasLocation" x="1350" y="727"/>
         </scene>
         <!--Listings-->
         <scene sceneID="4PE-bg-eZR">
@@ -965,10 +1023,11 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="sjY-U3-ie6"/>
-        <segue reference="n2l-uJ-PJh"/>
+        <segue reference="IQf-fK-3lR"/>
         <segue reference="r9i-e6-7OC"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="Done button" width="314" height="49"/>
         <image name="Don’t have an account" width="158" height="18"/>
         <image name="Email" width="43" height="22"/>
         <image name="Feed icon" width="24.5" height="22.5"/>
@@ -982,6 +1041,7 @@
         <image name="Profile icon" width="17" height="22"/>
         <image name="QuickWork Logo" width="250" height="58"/>
         <image name="Sign Up Button" width="314" height="49"/>
+        <image name="Sign Up Heading" width="103" height="36"/>
         <image name="Sign Up." width="56" height="18"/>
         <image name="Username" width="80" height="22"/>
         <image name="person" catalog="system" width="128" height="117"/>
