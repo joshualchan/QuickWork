@@ -8,10 +8,14 @@
 
 import UIKit
 import Parse
+
 class MsgViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     var messageList: [PFObject] = []
     var userList: [String] = []
+    var tasks = [PFObject]()
+    var refreshControl: UIRefreshControl!
     @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.rowHeight = 40;
@@ -31,6 +35,10 @@ class MsgViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             self.tableView.delegate = self
             self.tableView.dataSource = self
         }
+        getTasks()
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(getTasks), for: .valueChanged)
+        tableView.addSubview(refreshControl)
     }
     
     func retrieveConversations() {
@@ -118,6 +126,33 @@ class MsgViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         self.tableView.deselectRow(at: indexPath, animated: true)
 
         
+    }
+    
+    @objc func getTasks() {
+        let query = PFQuery(className: "Tasks")
+        query.addDescendingOrder("createdAt")
+        query.limit = 20
+        query.includeKey("user")
+        query.findObjectsInBackground { (tasks, error) in
+            if let tasks = tasks {
+                self.tasks = tasks
+                self.tableView.reloadData()
+            } else {
+                print(error!.localizedDescription)
+            }
+        }
+        refresh()
+    }
+    
+    func run(after wait: TimeInterval, closure: @escaping () -> Void) {
+        let queue = DispatchQueue.main
+        queue.asyncAfter(deadline: DispatchTime.now() + wait, execute: closure)
+    }
+    
+    func refresh() {
+        run(after: 2) {
+           self.refreshControl.endRefreshing()
+        }
     }
     
         
