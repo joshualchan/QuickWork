@@ -16,7 +16,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var errorLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        errorLabel.text = ""
         // Do any additional setup after loading the view.
     }
     
