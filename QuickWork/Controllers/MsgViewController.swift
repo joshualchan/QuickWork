@@ -39,6 +39,7 @@ class MsgViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(getTasks), for: .valueChanged)
         tableView.addSubview(refreshControl)
+       
     }
     
     func retrieveConversations() {
