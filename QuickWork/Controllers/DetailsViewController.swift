@@ -28,6 +28,7 @@ class DetailsViewController: UIViewController {
         descriptionLabel.text = details["description"] as? String
         taskNameLabel.text = details["name"] as? String
         cityLabel.text = details["city"] as? String
+        contactLabel.text = details["price"] as? String
         let user = details["user"] as? PFUser
         
         if let imageFile = details["image"] as? PFFileObject {
@@ -36,7 +37,6 @@ class DetailsViewController: UIViewController {
             taskImage.af.setImage(withURL: url)
         }
         nameLabel.text = user?["name"] as? String
-        contactLabel.text = user?["number"] as? String
         let listingUser = user?.objectId as? String
         let currentUser = PFUser.current()!.objectId as? String
         if (currentUser == listingUser) {

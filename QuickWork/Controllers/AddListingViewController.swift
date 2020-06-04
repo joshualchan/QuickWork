@@ -17,6 +17,7 @@ class AddListingViewController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var taskImage: UIImageView!
+    @IBOutlet weak var priceTextField: UITextField!
     
     
     override func viewDidLoad() {
@@ -39,6 +40,7 @@ class AddListingViewController: UIViewController, UIImagePickerControllerDelegat
             object["name"] = nameTextField.text!
             object["description"] = descriptionTextField.text!
             object["city"] = cityTextField.text
+            object["price"] = priceTextField.text
             
             if let imageData = taskImage.image!.pngData() {
             
@@ -92,7 +94,7 @@ class AddListingViewController: UIViewController, UIImagePickerControllerDelegat
     
     
     func emptyText() -> Bool {
-        if nameTextField.text == "" || descriptionTextField.text == "" || cityTextField.text == ""  {
+        if nameTextField.text == "" || descriptionTextField.text == "" || cityTextField.text == "" || priceTextField.text == ""  {
             return true
         }
         return false
