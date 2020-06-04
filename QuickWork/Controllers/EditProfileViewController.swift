@@ -20,6 +20,7 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        errorLabel.text = ""
         
         if let user = PFUser.current() {
            nameLabel.placeholder = user["name"] as? String
