@@ -39,6 +39,14 @@ class MyListingsViewController: UIViewController, UITableViewDelegate, UITableVi
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        roundProfile()
+        setProfile()
+        getTasks()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return myListings.count
     }

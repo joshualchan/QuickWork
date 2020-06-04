@@ -28,6 +28,11 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.addSubview(refreshControl)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        getTasks()
+        tableView.reloadData()
+    }
+    
     //to go to the add listing page
     @IBAction func addListingButton(_ sender: Any) {
         self.performSegue(withIdentifier: Segues.addListing, sender: nil)
