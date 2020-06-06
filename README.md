@@ -13,7 +13,6 @@
 QuickWork is a quick and efficient freelancing app that supports messaging.
 
 ### App Evaluation
-[Evaluation of your app across the following attributes]
 - **Category:** Business
 - **Mobile:** This app is optimized for iOS (mobile) because of its native features. This app also relies on MessageKit, which provides elegant messages.
 - **Story:** We want to develop a quick and efficient freelancing app that enables users to post and search tasks, communicate easily, and perform transactions all in one app.
