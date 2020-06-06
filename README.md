@@ -37,6 +37,7 @@
 * User can search for a task
 * User can pay on the app
 * User can mark when a task is finished/ delete a task
+* User can update their profile
 
 ### 2. Screen Archetypes
 
@@ -57,12 +58,18 @@
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+* Login screen
+   * Sign in screen
+   * Main feed screen
+* Sign in screen -> input basic info screen -> main feed screen
+* Main feed screen
+   * Add listing screen
+   * Details screen
+* Profile screen
+   * Edit profile screen
+   * Details screen
+* Details screen -> chat screen
+* Messages screen -> chat screen
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
@@ -72,7 +79,6 @@
 
 ### [BONUS] Interactive Prototype
 
-## Schema 
 ## Schema 
 ### Models
 #### User
@@ -113,3 +119,12 @@
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
+
+## Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
+<img src='iOSFinalProject.gif' title='Walkthrough' width='' alt='Walkthrough' />
+
+## Presentation
+
+Here's our group's [presentation](https://docs.google.com/presentation/d/1zp3fNso_jEsT2tvyq15--9_hW8GmKbTj_cH_Jw0Xatw/edit?usp=sharing) for CodePath at UCI's Demo Day 6/6/2020.
