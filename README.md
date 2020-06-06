@@ -87,8 +87,7 @@ QuickWork is a quick and efficient freelancing app that supports messaging.
 * Messages screen -> chat screen
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="https://imgur.com/a/p2RA8M0" width=600>
 
 ## Schema 
 ### Models
