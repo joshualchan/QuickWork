@@ -1,5 +1,7 @@
 # QuickWork
 
+<img src='iOSFinalProject.gif' title='Walkthrough' width='' alt='Walkthrough' />
+
 ## Table of Contents
 1. [Overview](#Overview)
 1. [Product Spec](#Product-Spec)
@@ -120,10 +122,6 @@
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
 
-## Video Walkthrough
-
-Here's a walkthrough of implemented user stories:
-<img src='iOSFinalProject.gif' title='Walkthrough' width='' alt='Walkthrough' />
 
 ## Presentation
 
