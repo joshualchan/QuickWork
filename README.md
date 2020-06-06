@@ -73,9 +73,42 @@
 ### [BONUS] Interactive Prototype
 
 ## Schema 
-[This section will be completed in Unit 9]
+## Schema 
 ### Models
-[Add table of models]
+#### User
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the user (default field) |
+   | number        | String   | user's phone number |
+   | username      | String   | user's username |
+   | password      | String   | (hidden) |
+   | email         | Number   | user's email address |
+   | picture       | File?    | user can upload an optional photo |
+   | createdAt     | DateTime | date when post is created (default field) |
+#### Message
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the message (default field) |
+   | message        | String   | message sent by user |
+   | recipient      | String   | foreign key from User's objectId |
+   | sender      | String   | foreign key from User's objectId |
+   | name         | Number   | name of the user that sent the message |
+   | createdAt     | DateTime | date when message is created (default field) |
+#### Tasks
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the task (default field) |
+   | city          | String   | city in which task takes place |
+   | name          | String   | name of the task |
+   | user          | String   | foreign key from User's objectId of the user that posted the task |
+   | image         | File?   | optional image for task |
+   | description   | String   | description for the task |
+   | createdAt     | DateTime | date when post is created (default field) |
+
+
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
