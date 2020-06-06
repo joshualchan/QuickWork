@@ -1,7 +1,5 @@
 # QuickWork
 
-<img src='iOSFinalProject.gif' title='Walkthrough' width='' alt='Walkthrough' />
-
 ## Table of Contents
 1. [Overview](#Overview)
 1. [Product Spec](#Product-Spec)
@@ -11,6 +9,16 @@
 ## Overview
 ### Description
 QuickWork is a quick and efficient freelancing app that supports messaging.
+
+### About the App
+This app was created by Joshua Chan, Christopher Cooper and Madison Wong.
+
+QuickWork was built in Swift and uses a Parse for storing data. It also uses MessageKit for the messaging functionality.
+
+### Video Walkthrough
+Here's a walkthrough of implemented user stories:
+
+<img src='iOSFinalProject.gif' title='Walkthrough' width='' alt='Walkthrough' />
 
 ### App Evaluation
 - **Category:** Business
