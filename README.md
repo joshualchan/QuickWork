@@ -10,16 +10,16 @@
 
 ## Overview
 ### Description
-[Description of your app]
+QuickWork is a quick and efficient freelancing app that supports messaging.
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
 - **Category:** Business
-- **Mobile:** This app is optimized for iOS (mobile) because of the native features of Swift.
+- **Mobile:** This app is optimized for iOS (mobile) because of its native features. This app also relies on MessageKit, which provides elegant messages.
 - **Story:** We want to develop a quick and efficient freelancing app that enables users to post and search tasks, communicate easily, and perform transactions all in one app.
 - **Market:** People in densely populated communities looking to effectively get a task done. Freelancers looking to complete tasks.
-- **Habit:**
-- **Scope:**
+- **Habit:** People looking to post jobs will probably use this app once every week to month. People looking to complete jobs will probably use this app more frequently.
+- **Scope:** We will first release the app once basic features and messaging feature is implemented. Then we will add additional functionality like search, in-app payments, etc....
 
 ## Product Spec
 
@@ -43,12 +43,26 @@
 
 ### 2. Screen Archetypes
 
-* [list first screen here]
-   * [list associated required story here]
-   * ...
-* [list second screen here]
-   * [list associated required story here]
-   * ...
+* Login screen
+   * Upon opening the app, the user has the option to log in with an existing account or sign up.
+* Signup/basic information screen
+   * Upon clicking the signup button, the user will into a username and password and entering it will direct them to another screen where they input their profile information (name, email, phone, optional profile picture).
+* Main feed screen
+   * Displays a table view of all the tasks the users post.
+* Details screen
+   * Displays additional information (description, location, ...) for one particular task. 
+* Add listing screen
+   * User can add information about a new task they're going to post.
+* Profile screen
+   * Displays user's basic information and a table view containing only the user's posts. 
+* Edit info screen
+   * User can edit their name/email/phone number/profile picture.
+* Messages screen
+   * A table view of the current user's conversations with different users.
+* Chat screen
+   * User can message another user.
+ 
+
 
 ### 3. Navigation
 
@@ -76,10 +90,6 @@
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
 <img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
-
-### [BONUS] Digital Wireframes & Mockups
-
-### [BONUS] Interactive Prototype
 
 ## Schema 
 ### Models
