@@ -1,6 +1,6 @@
 # QuickWork
 
-<img src='finalProjectPhotos/feedPhoto.png' title='Feed photo' width='' alt='Feed photo' width = "200" height = "360"/> |  <img src='finalProjectPhotos/profilePhoto.png' title='Profile photo' width='' alt='Profile photo' width = "200" height = "360"/> |  <img src='finalProjectPhotos/detailsPhoto.png' title='Details photo' width='' alt='Details photo' width = "200" height = "360" /> |  <img src='finalProjectPhotos/chatPhoto.png' title='Chat photo' width='' alt='Chat photo' width = "200" height = "360"/>
+<img src='finalProjectPhotos/feedPhoto.png' title='Feed photo' width='' alt='Feed photo' width = "200" height = "360"/>   <img src='finalProjectPhotos/profilePhoto.png' title='Profile photo' width='' alt='Profile photo' width = "200" height = "360"/>   <img src='finalProjectPhotos/detailsPhoto.png' title='Details photo' width='' alt='Details photo' width = "200" height = "360" />   <img src='finalProjectPhotos/chatPhoto.png' title='Chat photo' width='' alt='Chat photo' width = "200" height = "360"/>
 
 ## Table of Contents
 1. [Overview](#Overview)
