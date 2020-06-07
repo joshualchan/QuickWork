@@ -1,5 +1,9 @@
 # QuickWork
 
+<img src='finalProjectPhotos/feedPhoto.png' title='Feed photo' width='' alt='Feed photo' /> |  <img src='finalProjectPhotos/profilePhoto.png' title='Profile photo' width='' alt='Profile photo' /> |  <img src='finalProjectPhotos/detailsPhoto.png' title='Details photo' width='' alt='Details photo' /> |  <img src='finalProjectPhotos/chatPhoto.png' title='Chat photo' width='' alt='Chat photo' />
+:-------------------------:|:-------------------------:-------------------------:|:-------------------------:
+
+
 ## Table of Contents
 1. [Overview](#Overview)
 1. [Product Spec](#Product-Spec)
